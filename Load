@@ -1,20 +1,17 @@
-local placeId1 = 18419341625
-local placeId2 = 6792057800
-
-if game.PlaceId == placeId1 or game.PlaceId == placeId2 then
-
--- Carrega o OrionLib e cria a janela
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/HagoromoMd/Painel-Airsoft-FE-2.0-loadstring-/refs/heads/main/SyniX"))()
-local Window = OrionLib:MakeWindow({Name = " SyniX HUB-Airsoft FE ", HidePremium = false, SaveConfig = false, ConfigFolder = "Synix"})
+if game.PlaceId == 990566015 then
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/XqrpaiBrxxys/-ainel-C-ursed-Is-ands-/refs/heads/main/%26aine%23"))()
+local Window = OrionLib:MakeWindow({Name = "SyniX HUB - CURSED ISLANDS ", HidePremium = false, SaveConfig = true, ConfigFolder = "Synix"})
 
 
-local ABOUTTab = Window:MakeTab({
+
+
+  local ABOUTTab = Window:MakeTab({
     Name = "ABOUT",
     Icon = "rbxassetid://14824506141",
     PremiumOnly = false
 })
 
-ABOUTTab:AddLabel("                                             Airsoft FE")
+ABOUTTab:AddLabel("                                      CURSED ISLANDS")
 
  local Section = ABOUTTab:AddSection({
 	Name = ""
@@ -29,9 +26,9 @@ ABOUTTab:AddLabel("                                  SOCIAL NETWORK")
  
  
 ABOUTTab:AddButton({
-    Name = "                                            DISCORD ",
+    Name = "ㅤ   ㅤㅤ   ㅤㅤ   ㅤㅤ      ㅤ       ㅤDISCORD ",
     Callback = function()
-        setclipboard("https://discord.gg/svnCNEj8hW")
+        setclipboard("https://discord.com/invite/Hembr363")
         OrionLib:MakeNotification({
             Name = "SyniX HUB",
             Content = "Copied Discord link",
@@ -43,315 +40,362 @@ ABOUTTab:AddButton({
  local Section = ABOUTTab:AddSection({
 	Name = ""
 })
-  ABOUTTab:AddLabel("                     DEVELOPERS: RayzMd | Zor_Son")
+  ABOUTTab:AddLabel("                     DEVELOPERS: RayzMods | Zor_Son")
 
-
-
-  
-
-local AIMBOTTab= Window:MakeTab({
-    Name = "AIMBOT",
-    Icon = "rbxassetid://86146554785752",
+-- Cria a aba e o toggle no OrionLib
+local PlayerTab = Window:MakeTab({
+    Name = "FARM",
+    Icon = "rbxassetid://18996452012", -- Substitua pelo ID correto do ícone
     PremiumOnly = false
 })
 
+PlayerTab:AddLabel("                                                    FARM")
 
 
-local featureEnabled = false
 
--- Função que define a câmera para olhar para a posição da cabeça do alvo
-local function lookAt(target, eye)
-    local Cam = workspace.CurrentCamera
-    Cam.CFrame = CFrame.new(target, eye)
+
+                                                  
+
+                   
+local toggleActive = false -- Variável para armazenar o estado do toggle
+
+-- Função para "congelar" o personagem
+local function freezeCharacter(humanoidRootPart, humanoid, targetPosition)
+    humanoidRootPart.CFrame = CFrame.new(targetPosition)
+    humanoid.PlatformStand = true -- Desativa a física do personagem
+
+    local bodyPosition = Instance.new("BodyPosition")
+    bodyPosition.Parent = humanoidRootPart
+    bodyPosition.MaxForce = Vector3.new(math.huge, math.huge, math.huge) -- Garante que a força máxima seja aplicada
+    bodyPosition.D = 1000 -- Damping para suavizar o movimento, se necessário
+    bodyPosition.P = 10000 -- Força de posicionamento
+    bodyPosition.Position = targetPosition
 end
 
--- Função que encontra o jogador inimigo mais próximo ao cursor
-local function getClosestEnemyPlayerToCursor(trg_part)
-    local nearest = nil
-    local last = math.huge
-    local hotkey = true
-    local maxDistance = 20 -- Distância máxima
-    local mousePos = Vector2.new(workspace.CurrentCamera.ViewportSize.x / 2, workspace.CurrentCamera.ViewportSize.y / 2)
+-- Configuração do Toggle
+PlayerTab:AddToggle({
+    Name = "WIN",
+    Default = false,
+    Callback = function(value)
+        toggleActive = value
+        local player = game.Players.LocalPlayer
+        local targetPosition = CFrame.new(9972.58203125, 10053.0068359375, 20.453182220458984)
 
-    for _, v in pairs(game.Players:GetPlayers()) do
-        if v ~= game.Players.LocalPlayer and game.Players.LocalPlayer.Character and v.Character and v.Character:FindFirstChild(trg_part) then
-            local ePos, vissss = workspace.CurrentCamera:WorldToViewportPoint(v.Character[trg_part].Position)
-            local AccPos = Vector2.new(ePos.x, ePos.y)
-            local distance = (AccPos - mousePos).magnitude
-            if distance < last and vissss and hotkey and distance < maxDistance then
-                last = distance
-                nearest = v
+        local function freezeCharacter(character, targetPosition)
+            if not targetPosition then
+                warn("targetPosition é nil.")
+                return
+            end
+            
+            local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+            
+            -- Teleporte instantâneo
+            humanoidRootPart.CFrame = targetPosition
+            
+            -- Configurar BodyPosition para manter a posição
+            local bodyPosition = humanoidRootPart:FindFirstChildOfClass("BodyPosition")
+            if not bodyPosition then
+                bodyPosition = Instance.new("BodyPosition")
+                bodyPosition.Name = "BodyPosition"
+                bodyPosition.Parent = humanoidRootPart
+            end
+            bodyPosition.Position = targetPosition.Position
+            bodyPosition.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+            bodyPosition.D = 1000 -- Alta taxa de amortecimento para manter a posição
+            bodyPosition.P = 10000 -- Alta força para manter a posição
+            
+            -- Configurar BodyGyro para manter a orientação
+            local bodyGyro = humanoidRootPart:FindFirstChildOfClass("BodyGyro")
+            if not bodyGyro then
+                bodyGyro = Instance.new("BodyGyro")
+                bodyGyro.Name = "BodyGyro"
+                bodyGyro.Parent = humanoidRootPart
+            end
+            bodyGyro.CFrame = targetPosition
+            bodyGyro.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+            bodyGyro.P = 3000 -- Alta força para manter a orientação
+            bodyGyro.D = 1000 -- Alta taxa de amortecimento para manter a orientação
+        end
+
+        local function onCharacterAdded(character)
+            local humanoid = character:WaitForChild("Humanoid")
+            
+            humanoid.Died:Connect(function()
+                if toggleActive then
+                    -- Reposicionar o personagem após a morte
+                    local respawnCharacter = player.CharacterAdded:Wait()
+                    freezeCharacter(respawnCharacter, targetPosition)
+                end
+            end)
+            
+            if toggleActive then
+                freezeCharacter(character, targetPosition)
+            end
+        end
+
+        -- Conectar à morte e renascimento do personagem
+        if toggleActive then
+            local character = player.Character or player.CharacterAdded:Wait()
+            onCharacterAdded(character)
+            player.CharacterAdded:Connect(onCharacterAdded)
+        else
+            -- Desativar a funcionalidade de teleporte e remover BodyPosition e BodyGyro se existirem
+            local character = player.Character or player.CharacterAdded:Wait()
+            local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+            
+            local bodyPosition = humanoidRootPart:FindFirstChildOfClass("BodyPosition")
+            if bodyPosition then
+                bodyPosition:Destroy()
+            end
+            
+            local bodyGyro = humanoidRootPart:FindFirstChildOfClass("BodyGyro")
+            if bodyGyro then
+                bodyGyro:Destroy()
             end
         end
     end
-    return nearest
-end
-
-local modifiedPlayers = {}
-local featureEnabled = false -- Status inicial do recurso
-local maxModifiedPlayers = 10 -- Defina o número máximo de jogadores que podem ter a hitbox modificada
-
--- Função para determinar se um jogador é inimigo
-local function isEnemy(player)
-    return player.Team ~= game.Players.LocalPlayer.Team -- Verificar se o jogador está em um time diferente
-end
-
-local function configureHitbox(humanoidRootPart)
-    humanoidRootPart.Size = Vector3.new(30, 80, 30) -- Aumenta a altura
-    humanoidRootPart.Transparency = 1 -- Totalmente invisível
-    humanoidRootPart.Material = Enum.Material.SmoothPlastic
-    humanoidRootPart.CanCollide = false
-end
-
-local function resetHitbox(humanoidRootPart)
-    humanoidRootPart.Size = Vector3.new(2, 2, 1) -- Altura padrão
-    humanoidRootPart.Transparency = 1 -- Totalmente invisível
-    humanoidRootPart.Material = Enum.Material.SmoothPlastic
-    humanoidRootPart.CanCollide = true
-end
-
-local function updateHitbox(player)
-    pcall(function()
-        local humanoidRootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
-        if humanoidRootPart then
-            local modifiedCount = 0
-            for _ in pairs(modifiedPlayers) do
-                modifiedCount = modifiedCount + 1
-            end
-
-            if featureEnabled and isEnemy(player) and modifiedCount < maxModifiedPlayers then
-                configureHitbox(humanoidRootPart) -- Aplica a hitbox modificada
-                modifiedPlayers[player] = true -- Marca o jogador como modificado
-            elseif modifiedPlayers[player] then
-                resetHitbox(humanoidRootPart) -- Reseta a hitbox se já foi modificada
-                modifiedPlayers[player] = nil -- Remove a marcação de modificado
+})
+  -- Função para teleportar o personagem 5 blocos acima de cada moeda
+function teleporteParaMoedas()
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        local character = player.Character
+        local humanoidRootPart = character.HumanoidRootPart
+        local coinSpawnsFolder = game.Workspace.Lobby.CoinSpawns
+        
+        if coinSpawnsFolder then
+            for _, spawn in ipairs(coinSpawnsFolder:GetChildren()) do
+                local coin = spawn:FindFirstChild("Coin")
+                if coin and coin:FindFirstChild("Appa") then
+                    local appa = coin.Appa
+                    -- Teleporta o personagem 5 blocos acima da moeda
+                    humanoidRootPart.CFrame = appa.CFrame * CFrame.new(0, 7, 0)
+                    wait(3) -- Pequena pausa para garantir que o teleporte ocorra corretamente
+                    if not _G.coletafrutas then return end -- Para o loop caso o toggle seja desativado
+                end
             end
         end
-    end)
-end
-
--- Atualiza a hitbox de todos os jogadores já existentes
-for _, player in pairs(game.Players:GetPlayers()) do
-    if player ~= game.Players.LocalPlayer then
-        player.CharacterAdded:Connect(function()
-            updateHitbox(player) -- Atualiza a hitbox ao renascer
-        end)
-        updateHitbox(player) -- Atualiza a hitbox para jogadores existentes
     end
 end
 
--- Monitorar novos jogadores que entram no servidor
-game.Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(function()
-        updateHitbox(player) -- Atualiza a hitbox ao renascer
-    end)
-end)
-
--- Monitorar quando o jogador local é reiniciado
-game.Players.LocalPlayer.CharacterAdded:Connect(function()
-    updateHitbox(game.Players.LocalPlayer) -- Atualiza a hitbox do jogador local ao renascer
-end)
-
--- Função para ativar a mira e a modificação da hitbox
-game:GetService("RunService").RenderStepped:Connect(function()
-    if featureEnabled then
-        -- Aimbot: Mira na cabeça do jogador inimigo mais próximo
-        local closest = getClosestEnemyPlayerToCursor("Head")
-        if closest and closest.Character and closest.Character:FindFirstChild("Head") then
-            local headPosition = closest.Character.Head.Position + Vector3.new(0, 5, 0) -- Ajuste a posição da mira
-            lookAt(workspace.CurrentCamera.CFrame.p, headPosition) -- Chama a função que muda a visão da câmera
-        end
-    end
-end)-- Configuração do toggle para ativar/desativar a função
-
-AIMBOTTab:AddLabel("                                              FOCUSED AIM ")
-
-AIMBOTTab:AddToggle({
-    Name = "ACTIVE",
+-- Toggle para ativar/desativar a coleta de moedas
+PlayerTab:AddToggle({
+    Name = "COLLECT FRUIT",
     Default = false,
     Callback = function(Value)
-        featureEnabled = Value -- Define o status do recurso
-        for _, player in pairs(game.Players:GetPlayers()) do
-            updateHitbox(player) -- Atualiza a hitbox de todos os jogadores
+        _G.coletafrutas = Value
+        if Value then
+            while _G.coletafrutas do
+                teleporteParaMoedas()
+                wait(1) -- Intervalo entre as coletas
+            end
         end
     end
 })
 
-local selectedFunction = nil -- Variável para armazenar a função selecionada
-local spectatorLoop -- Variável para armazenar a conexão do RenderStepped
-local originalCFrame = nil -- Variável para armazenar a posição original da câmera
-local lastTargetPlayer = nil -- Armazena o último jogador espectado
-local lastTargetCFrame = nil -- Armazena a última posição da câmera do jogador espectado
-local lastCameraPosition = nil -- Armazena a última posição da câmera
-
-local function handleAura()
-    local localPlayer = game.Players.LocalPlayer
-    local camera = game.Workspace.CurrentCamera
-
-    getgenv().enabled = true
-    getgenv().filluseteamcolor = false
-    getgenv().outlineuseteamcolor = false
-    getgenv().fillcolor = Color3.new(1, 0, 0)
-    getgenv().outlinecolor = Color3.new(1, 1, 1)
-    getgenv().filltrans = 0
-    getgenv().outlinetrans = 0
-
-    local holder = game.CoreGui:FindFirstChild("ESPHolder") or Instance.new("Folder")
-    if holder.Name == "Folder" then
-        holder.Name = "ESPHolder"
-        holder.Parent = game.CoreGui
-    end
-
-    local function getSpectateTarget()
-        for _, player in pairs(game.Players:GetPlayers()) do
-            if player.Name ~= localPlayer.Name 
-                and (not player.Team or player.Team ~= localPlayer.Team)
-                and player.Character 
-                and player.Character:FindFirstChild("Humanoid")
-                and player.Character.Humanoid.Health > 0
-                and not player.Character:FindFirstChild("ForceField")
-            then
-                return player
-            end
-        end
-        return nil
-    end
-
-    local function startSpectating()
-        local targetPlayer = getSpectateTarget()
-
-        if not targetPlayer and lastTargetPlayer then
-            targetPlayer = lastTargetPlayer
-        end
-
-        if not originalCFrame then
-            originalCFrame = camera.CFrame 
-        end
-
-        if targetPlayer and targetPlayer.Character then
-            lastTargetPlayer = targetPlayer
-            local head = targetPlayer.Character:FindFirstChild("Head")
-            
-            if head then
-                lastTargetCFrame = CFrame.new(
-                    head.Position + Vector3.new(0, 5, 0),
-                    head.Position
-                )
-
-                spectatorLoop = game:GetService("RunService").RenderStepped:Connect(function()
-                    if targetPlayer 
-                        and targetPlayer.Character 
-                        and targetPlayer.Character:FindFirstChild("Head")
-                        and targetPlayer.Character:FindFirstChild("Humanoid").Health > 0
-                        and not targetPlayer.Character:FindFirstChild("ForceField")
-                    then
-                        head = targetPlayer.Character.Head
-                        camera.CFrame = CFrame.new(
-                            head.Position + Vector3.new(0, 5, 0),
-                            head.Position
-                        )
-                        
-                        lastTargetCFrame = camera.CFrame
-                        
-                        local esp = holder:FindFirstChild(targetPlayer.Name) or Instance.new("Highlight")
-                        esp.Name = targetPlayer.Name
-                        esp.Parent = holder
-                        if filluseteamcolor then
-                            esp.FillColor = targetPlayer.TeamColor.Color
-                        else
-                            esp.FillColor = fillcolor 
-                        end
-                        if outlineuseteamcolor then
-                            esp.OutlineColor = targetPlayer.TeamColor.Color
-                        else
-                            esp.OutlineColor = outlinecolor    
-                        end
-                        esp.FillTransparency = filltrans
-                        esp.OutlineTransparency = outlinetrans
-                        esp.Adornee = targetPlayer.Character
-                        esp.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-                    else
-                        targetPlayer = getSpectateTarget()
-                        if not targetPlayer and lastTargetCFrame then
-                            camera.CFrame = lastTargetCFrame
-                        end
-                    end
-                end)
-            end
-        else
-            if lastTargetCFrame then
-                camera.CFrame = lastTargetCFrame
-            end
-        end
-    end
-
-    startSpectating()
-end
-
-local function stopAura()
-    if spectatorLoop then
-        spectatorLoop:Disconnect()
-        spectatorLoop = nil
-    end
-
-    if originalCFrame then
-        game.Workspace.CurrentCamera.CFrame = originalCFrame
-        originalCFrame = nil
-    end
-
-    -- Teleportar o personagem para a última posição da câmera
-    local localPlayer = game.Players.LocalPlayer
-    if lastCameraPosition then
-        localPlayer.Character:MoveTo(lastCameraPosition.Position) -- Teletransporta o personagem
-    end
-
-    local holder = game.CoreGui:FindFirstChild("ESPHolder")
-    if holder then
-        holder:ClearAllChildren()
+-- Inicia o loop de coleta se o toggle estiver ativado
+if _G.coletafrutas then
+    while _G.coletafrutas do
+        teleporteParaMoedas()
+        wait(1) -- Intervalo entre as coletas
     end
 end
 
-local actions = {
-    ["Aura"] = handleAura
+
+
+
+
+
+local function setSpeed(value)
+    local player = game.Players.LocalPlayer
+    local character = player.Character
+    if character and character:FindFirstChild("Humanoid") then
+        local humanoid = character:FindFirstChild("Humanoid")
+        humanoid.WalkSpeed = tonumber(value)
+    end
+end
+-- Função para equipar o equipamento Cutlass
+local function equipCutlass(cutlass)
+    if cutlass and cutlass:FindFirstChild("TouchInterest") then
+        -- Simula um toque no equipamento
+        local playerPart = game.Players.LocalPlayer.Character.PrimaryPart
+        if playerPart then
+            firetouchinterest(playerPart, cutlass, 0)
+            firetouchinterest(playerPart, cutlass, 1)
+        end
+    end
+end
+
+-- Percorre todas as ilhas e tenta equipar o Cutlass em cada uma delas
+local function equipCutlassInAllIslands()
+    local islands = workspace.Map.Classic.Islands:GetChildren()
+
+    for _, island in ipairs(islands) do
+        local cutlass = island:FindFirstChild("Mountain") and island.Mountain:FindFirstChild("Cutlass")
+        if cutlass then
+            equipCutlass(cutlass)
+        end
+    end
+end
+
+      
+PlayerTab:AddLabel("                                                    TOOL")
+
+
+-- Adicionar o botão no PlayerTab
+PlayerTab:AddButton({
+    Name = "SWORD",
+    Callback = function()
+        -- Executar a função inicial para equipar o Cutlass nas ilhas já existentes
+        equipCutlassInAllIslands()
+    end
+})
+
+-- Função para encontrar o UFO nas ilhas ou fora delas e teletransportar o jogador para o VehicleSeat
+local function teleportToVehicleSeat()
+    local ufo
+
+    -- Percorre todas as ilhas em busca do UFO
+    for _, island in ipairs(workspace.Map.Classic.Islands:GetChildren()) do
+        if island:FindFirstChild("Pad") and island.Pad:FindFirstChild("UFO") then
+            ufo = island.Pad.UFO
+            break
+        end
+    end
+
+    -- Se não encontrar nas ilhas, verifica fora delas
+    if not ufo then
+        ufo = workspace:FindFirstChild("UFO")
+    end
+
+    -- Tenta encontrar o VehicleSeat dentro do UFO encontrado
+    if ufo then
+        local vehicleSeat = ufo:FindFirstChild("VehicleSeat") or (ufo:GetChildren()[6] and ufo:GetChildren()[6]:FindFirstChild("VehicleSeat"))
+        if vehicleSeat then
+            local player = game.Players.LocalPlayer
+            if player and player.Character and player.Character.PrimaryPart then
+                local character = player.Character
+                local primaryPart = character.PrimaryPart
+
+                -- Posiciona o personagem na mesma posição e orientação que o VehicleSeat
+                primaryPart.CFrame = vehicleSeat.CFrame
+            end
+        end
+    end
+end
+
+-- Adicionar o botão no PlayerTab
+PlayerTab:AddButton({
+    Name = "UFO",
+    Callback = function()
+        teleportToVehicleSeat()
+    end
+})
+
+-- Função para interagir com o assento do Turret
+local function interactWithTurretSeat(seat)
+    if seat and seat:IsA("VehicleSeat") then
+        -- Simula a interação com o assento
+        local playerPart = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.PrimaryPart
+        if playerPart then
+            firetouchinterest(playerPart, seat, 0)
+            firetouchinterest(playerPart, seat, 1)
+        end
+    end
+end
+
+-- Função para verificar e interagir com todos os assentos do Turret nas ilhas
+local function interactWithAllTurrets()
+    local islands = workspace.Map.Classic.Islands:GetChildren()
+
+    for _, island in ipairs(islands) do
+        local turret = island:FindFirstChild("Top") and island.Top:FindFirstChild("Turret")
+        if turret then
+            local seat = turret:FindFirstChild("Head") and turret.Head:FindFirstChild("OperatorSeat")
+            if seat then
+                interactWithTurretSeat(seat)
+            end
+        end
+    end
+end
+
+-- Adicionar o botão no PlayerTab
+PlayerTab:AddButton({
+    Name = "TOWER",
+    Callback = function()
+        interactWithAllTurrets()
+    end
+})
+
+-- Função para encontrar e teletransportar para o Portal em qualquer ilha
+local function teleportToPortal()
+    local player = game.Players.LocalPlayer
+    local islands = workspace:FindFirstChild("Map")
+        and workspace.Map:FindFirstChild("Classic")
+        and workspace.Map.Classic:FindFirstChild("Islands")
+
+    if islands then
+        for _, island in pairs(islands:GetChildren()) do
+            local portal = island:FindFirstChild("Portal")
+                and island.Portal:FindFirstChild("Content")
+                and island.Portal.Content:FindFirstChild("Portal")
+
+            if portal and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+                player.Character.HumanoidRootPart.CFrame = portal.CFrame
+                break
+            end
+        end
+    end
+end
+-- Adicionar o botão no PlayerTab
+PlayerTab:AddButton({
+    Name = "PORTAL",
+    Callback = function()
+        teleportToPortal()
+    end
+})local args = {
+    [1] = "HasChest"
 }
 
-local deactivations = {
-    ["Aura"] = stopAura
-}
+function disableAnimations(object)
+    for _, descendant in pairs(object:GetDescendants()) do
+        if descendant:IsA("Tween") or descendant:IsA("Animation") then
+            descendant:Destroy()
+        elseif descendant:IsA("Script") or descendant:IsA("LocalScript") then
+            descendant.Disabled = true
+        end
+    end
+end
 
-AIMBOTTab:AddLabel("                                             INSTANT AIM ")
+function AUTO()
+    while _G.AUTOBAU do
+        disableAnimations(workspace.Lobby.Chest.GoldChest)
+        game:GetService("ReplicatedStorage").ReplicationManagers.ChestRF:InvokeServer(unpack(args))
+        wait(0.01)
+    end
+end
+PlayerTab:AddLabel("                                                  OPEN")
 
--- Toggle para ativar/desativar a funcionalidade "Aura"
-AIMBOTTab:AddToggle({
-    Name = "ACTIVE",
+PlayerTab:AddToggle({
+    Name = "BAÚ",
     Default = false,
     Callback = function(Value)
-        if Value then
-            actions["Aura"]() -- Ativa a função Aura
-        else
-            stopAura() -- Desativa a função Aura e teletransporta o personagem
+        _G.AUTOBAU = Value
+        if _G.AUTOBAU then
+            AUTO()
         end
     end    
 })
-
--- Atualiza a posição da câmera enquanto a função está ativa
-game:GetService("RunService").RenderStepped:Connect(function()
-    if spectatorLoop then
-        lastCameraPosition = game.Workspace.CurrentCamera.CFrame -- Armazena a posição atual da câmera
-    end
-end)
+                   
+  -- Cria a aba e o toggle no OrionLib
 local PLAYERTab = Window:MakeTab({
     Name = "PLAYER",
-    Icon = "rbxassetid://14961970030", -- Substitua pelo ID correto do Ã­cone
+    Icon = "rbxassetid://14961970030", -- Substitua pelo ID correto do ícone
     PremiumOnly = false
 })
-PLAYERTab:AddLabel("                                       PLAYER FUNCTION")
-
-
-
-
-
-
+  
+PLAYERTab:AddLabel("                                          FUNÇÕES PLAYER")
+  
 
 
 
@@ -359,7 +403,7 @@ PLAYERTab:AddLabel("                                       PLAYER FUNCTION")
 local player = game.Players.LocalPlayer
 local espInstances = {}
 
--- FunÃ§Ã£o para criar ESP
+-- Função para criar ESP
 local function createEsp(targetPlayer)
     local head = targetPlayer.Character and targetPlayer.Character:FindFirstChild("Head")
     if head and not head:FindFirstChild("ESP") then
@@ -379,9 +423,9 @@ local function createEsp(targetPlayer)
         TextLabel.TextWrapped = true
         TextLabel.TextXAlignment = Enum.TextXAlignment.Center
         TextLabel.TextYAlignment = Enum.TextYAlignment.Center
-        TextLabel.TextColor3 = (targetPlayer.Team == player.Team) and Color3.fromRGB(0, 191, 255) or Color3.fromRGB(255, 0, 0)
+        TextLabel.TextColor3 = (targetPlayer.Team == player.Team) and Color3.fromRGB(255, 0, 0) or Color3.fromRGB(255, 0, 0)
 
-        -- FunÃ§Ã£o para atualizar o texto
+        -- Função para atualizar o texto
         local function updateText()
             if head then
                 local distance = (head.Position - game.Workspace.CurrentCamera.CFrame.Position).Magnitude
@@ -394,7 +438,7 @@ local function createEsp(targetPlayer)
     end
 end
 
--- FunÃ§Ã£o para remover ESP
+-- Função para remover ESP
 local function removeEsp(targetPlayer)
     local head = targetPlayer.Character and targetPlayer.Character:FindFirstChild("Head")
     if head then
@@ -405,7 +449,7 @@ local function removeEsp(targetPlayer)
     end
 end
 
--- FunÃ§Ã£o para atualizar o ESP
+-- Função para atualizar o ESP
 local function updateEsp()
     for _, v in ipairs(game.Players:GetPlayers()) do
         if v ~= player then
@@ -421,11 +465,11 @@ end
 
 -- Adicionar Toggle para ativar/desativar o ESP
 PLAYERTab:AddToggle({
-    Name = "ESP PLAYERS",
+    Name = "ESP PLAYER",
     Default = false,
     Callback = function(value)
-        on = value -- Atualiza o status do ESP com o valor do botÃ£o de alternÃ¢ncia
-        isEspEnabled = value -- Atualiza o status do ESP com o valor do botÃ£o de alternÃ¢ncia
+        on = value -- Atualiza o status do ESP com o valor do botão de alternância
+        isEspEnabled = value -- Atualiza o status do ESP com o valor do botão de alternância
         updateEsp() -- Atualiza o ESP com base no novo valor
 
                       end
@@ -442,102 +486,31 @@ game.Players.PlayerAdded:Connect(function(newPlayer)
     end
 end)
 
--- FunÃ§Ã£o de loop para atualizar o ESP frequentemente
+-- Função de loop para atualizar o ESP frequentemente
 local function espLoop()
     while true do
         if isEspEnabled then
             updateEsp()
         end
-        wait(1) -- Aguarde 1 segundo antes de atualizar novamente (ajuste conforme necessÃ¡rio)
+        wait(1) -- Aguarde 1 segundo antes de atualizar novamente (ajuste conforme necessário)
     end
 end
 
 -- Iniciar o loop em uma nova thread
 spawn(espLoop)
 
--- Atualizar ESP para todos os jogadores existentes quando o script Ã© executado
+-- Atualizar ESP para todos os jogadores existentes quando o script é executado
 if isEspEnabled then
     updateEsp()
 end
 
--- Limpar todos os ESPs quando o script Ã© reexecutado
+-- Limpar todos os ESPs quando o script é reexecutado
 for _, gui in pairs(espInstances) do
     if gui and gui.Parent then
         gui:Destroy()
     end
 end
 espInstances = {}
-
-local InfiniteJumpEnabled = false  -- Variável para rastrear o estado do pulo infinito
-local jumpLoop  -- Variável para armazenar o loop de pulo
-local RunService = game:GetService("RunService")  -- Serviço de execução
-local UserInputService = game:GetService("UserInputService")  -- Serviço de entrada do usuário
-
--- Função para executar o pulo
-local function performJump()
-    local player = game:GetService("Players").LocalPlayer
-    if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
-        local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
-        if humanoid then
-            pcall(function()  -- Usar pcall para capturar erros
-                humanoid:ChangeState("Jumping")
-            end)
-        end
-    end
-end
-
-PLAYERTab:AddToggle({
-    Name = "JUMP",
-    Default = false,
-    Callback = function(value)
-        InfiniteJumpEnabled = value  -- Atualiza o estado do pulo infinito
-
-        -- Desconectar o loop de pulo se o toggle for desativado
-        if not InfiniteJumpEnabled and jumpLoop then
-            jumpLoop:Disconnect()
-            jumpLoop = nil
-        end
-    end
-})
-
--- Detectar o botão de pulo e iniciar o loop de pulo enquanto o botão é pressionado
-local jumpButton = game:GetService("Players").LocalPlayer.PlayerGui.MobileGui.Frame.Right.JUMPButton
-if jumpButton then
-    jumpButton.MouseButton1Down:Connect(function()
-        if InfiniteJumpEnabled then
-            -- Iniciar o loop de pulo ao pressionar o botão
-            if not jumpLoop then
-                jumpLoop = RunService.RenderStepped:Connect(function()
-                    performJump()  -- Executa a função de pulo continuamente enquanto o botão é pressionado
-                end)
-            end
-        end
-    end)
-
-    jumpButton.MouseButton1Up:Connect(function()
-        -- Interromper o loop de pulo ao soltar o botão
-        if jumpLoop then
-            jumpLoop:Disconnect()
-            jumpLoop = nil
-        end
-    end)
-end
-
--- Função para garantir que as conexões sejam desconectadas adequadamente
-local function cleanup()
-    if jumpLoop then
-        jumpLoop:Disconnect()
-        jumpLoop = nil
-    end
-end
-
--- Conectar ao evento de jogador sendo removido
-game.Players.LocalPlayer.AncestryChanged:Connect(function(_, parent)
-    if not parent then
-        cleanup()  -- Limpar conexões se o jogador for removido
-    end
-end)
-
 
 
 local noclipEnabled = false
@@ -557,7 +530,7 @@ PLAYERTab:AddToggle({
                 end
             end
 
-            -- Opcional: Ajustar a saÃºde mÃ¡xima e atual do jogador
+            -- Opcional: Ajustar a saúde máxima e atual do jogador
             local humanoid = character:FindFirstChildOfClass("Humanoid")
             if humanoid then
                 humanoid.MaxHealth = noclipEnabled and math.huge or 100
@@ -567,7 +540,6 @@ PLAYERTab:AddToggle({
     end
 })
 
--- Noclip toggle
 game:GetService("RunService").Stepped:Connect(function()
     if noclipEnabled then
         local player = game.Players.LocalPlayer
@@ -583,10 +555,27 @@ game:GetService("RunService").Stepped:Connect(function()
     end
 end)
 
+local InfiniteJumpEnabled = false  -- Adicionamos uma variável para rastrear o estado do pulo infinito
 
+PLAYERTab:AddToggle({
+    Name = "JUMP",
+    Default = false,
+    Callback = function(value)
+        _G.infinitojump = value
+        InfiniteJumpEnabled = value  -- Atualizamos o estado do pulo infinito ao ativar/desativar o toggle
+        while _G.infinitojump do
+            game:GetService("UserInputService").JumpRequest:Connect(function()
+                if InfiniteJumpEnabled then
+                    game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+                end
+            end)
+            wait()
+        end
+    end
+})
+
+  
 local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
-
 local player = Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
@@ -594,24 +583,24 @@ local humanoid = character:WaitForChild("Humanoid")
 local speedEnabled = false
 local lastSelectedSpeed = "16"
 
--- FunÃ§Ã£o para definir a velocidade do jogador
+-- Função para definir a velocidade do jogador
 local function setSpeed(speedValue)
     if humanoid then
         humanoid.WalkSpeed = tonumber(speedValue)
     end
 end
 
--- FunÃ§Ã£o para atualizar a velocidade quando o toggle Ã© alterado
+-- Função para atualizar a velocidade quando o toggle é alterado
 local function onSpeedToggle(value)
     speedEnabled = value
     if value then
         setSpeed(lastSelectedSpeed)
     else
-        setSpeed("16")  -- Substitua "16" pela velocidade padrÃ£o quando o toggle Ã© desativado
+        setSpeed("16")  -- Substitua "16" pela velocidade padrão quando o toggle é desativado
     end
 end
 
--- FunÃ§Ã£o para lidar com a morte do jogador
+-- Função para lidar com a morte do jogador
 local function onCharacterDied()
     if speedEnabled then
         -- Desativa a velocidade quando o jogador morre
@@ -619,11 +608,11 @@ local function onCharacterDied()
     end
 end
 
--- FunÃ§Ã£o para lidar com o renascimento do jogador
+-- Função para lidar com o renascimento do jogador
 local function onCharacterAdded(newCharacter)
     character = newCharacter
     humanoid = character:WaitForChild("Humanoid")
-
+    
     -- Reativa a velocidade se o toggle estiver ativado
     if speedEnabled then
         setSpeed(lastSelectedSpeed)
@@ -633,7 +622,7 @@ local function onCharacterAdded(newCharacter)
     humanoid.Died:Connect(onCharacterDied)
 end
 
--- FunÃ§Ã£o para manter a velocidade consistente
+-- Função para manter a velocidade consistente
 local function maintainSpeed()
     if speedEnabled then
         setSpeed(lastSelectedSpeed)
@@ -642,16 +631,16 @@ end
 
 -- Adiciona o toggle para controlar a velocidade
 local speedToggle = PLAYERTab:AddToggle({
-    Name = "ACTIVE SPEED",
+    Name = "SPEED",
     Default = false,
     Callback = onSpeedToggle
 })
 
 -- Adiciona o dropdown para selecionar a velocidade
 local speedDropdown = PLAYERTab:AddDropdown({
-    Name = "OPTION SPEED",
+    Name = "SELECT SPEED",
     Default = "16",
-    Options = {"0", "5", "10", "16", "22", "30", "35", "40", "45", "50"},
+    Options = {"0", "5", "10", "16", "22", "30", "35", "40", "50", "55", "65", "70", "80", "90", "95", "100", "125", "150", "200", "250", "300", "325", "350", "375", "390", "400"},
     Callback = function(value)
         lastSelectedSpeed = value
         if speedEnabled then
@@ -662,90 +651,333 @@ local speedDropdown = PLAYERTab:AddDropdown({
 
 -- Conecta os eventos de morte e renascimento
 player.CharacterAdded:Connect(onCharacterAdded)
-if character and humanoid then
+if character then
     humanoid.Died:Connect(onCharacterDied)
 end
 
 -- Configura o evento para garantir que a velocidade seja mantida
-RunService.Heartbeat:Connect(function()
+local function onHeartbeat()
     maintainSpeed()
-end)
+end
+
+-- Conecta a função de manutenção de velocidade ao evento Heartbeat
+game:GetService("RunService").Heartbeat:Connect(onHeartbeat)
+-- Conecta o evento de pular ao humanoide
+local function onJumpRequest()
+    if speedEnabled then
+        setSpeed(lastSelectedSpeed)
+    end
+end
+
+-- Conecta o evento de equipar itens
+local function onEquipped()
+    if speedEnabled then
+        setSpeed(lastSelectedSpeed)
+    end
+end
+
+-- Configura os eventos de pular e equipar itens
+humanoid.Jumping:Connect(onJumpRequest)
+local noclipEnabled = false
 
 
-local CONFIGTab = Window:MakeTab({
-    Name = "CONFIG",
-    Icon = "rbxassetid://18702777518", -- Substitua pelo ID correto do Ã­cone
+local MULTIPLAYERTab = Window:MakeTab({
+    Name = " MULTIPLAYER",
+    Icon = "rbxassetid://85826994371981", -- Substitua pelo ID correto do ícone
     PremiumOnly = false
 })
-CONFIGTab:AddLabel("                                                  MAP")
 
-       CONFIGTab:AddButton({
-    Name = "OPTIMIZATION",
-    Callback = function()
+local Plr = {}
+local playerDropdown
+local PlayerSelected = ""
+local ToggleState = false
+local localPlayer = game.Players.LocalPlayer
 
-        -- Reduzir qualidade gráfica
-        settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
-
-        -- Desativar efeitos visuais desnecessários
-        game.Lighting.GlobalShadows = false
-        game.Lighting.FogEnd = 9e9
-        game.Lighting.Brightness = 1
-
-        -- Ajustar câmera
-        workspace.CurrentCamera.FieldOfView = 70
-
-        -- Desativar sombras em partes
-        for _, part in pairs(workspace:GetDescendants()) do
-            if part:IsA("BasePart") then
-                part.CastShadow = false
-            end
+local function updatePlayerList()
+    -- Limpa a lista anterior
+    Plr = {}
+    -- Popula a lista com os jogadores atuais
+    for _, v in pairs(game:GetService("Players"):GetPlayers()) do
+        if v.Name ~= localPlayer.Name then
+            table.insert(Plr, v.Name)
         end
+    end
+    -- Mantém o jogador selecionado anterior se ainda estiver na lista, senão seleciona o primeiro jogador na nova lista
+    if not table.find(Plr, PlayerSelected) then
+        PlayerSelected = Plr[1] or ""
+    end
 
-        -- Desativar partículas e efeitos de água
-        for _, particle in pairs(workspace:GetDescendants()) do
-            if particle:IsA("ParticleEmitter") or particle:IsA("Trail") then
-                particle.Enabled = false -- Desativar todas as partículas
-            end
-        end
+    -- Atualiza o dropdown com a nova lista de jogadores
+    if playerDropdown then
+        playerDropdown:Refresh(Plr, true)
+    end
+end
 
-        -- Remover efeitos de chuva
-        for _, effect in pairs(workspace:GetDescendants()) do
-            if effect:IsA("ParticleEmitter") and effect.Name:lower():find("rain") then
-                effect.Enabled = false -- Desativar partículas de chuva
-            elseif effect:IsA("Sound") and effect.Name:lower():find("rain") then
-                effect:Stop() -- Parar sons de chuva
-            end
-        end
-
+-- Criação inicial do Dropdown com a lista de jogadores
+playerDropdown = MULTIPLAYERTab:AddDropdown({
+    Name = "SELECT PLAYER",
+    Default = "1",
+    Options = Plr,
+    Callback = function(value)
+        PlayerSelected = value
     end
 })
 
--- Variável para garantir que o FPS counter seja ativado apenas uma vez
+-- Atualiza a lista de jogadores ao criar o dropdown
+updatePlayerList()
+
+-- Toggle para Alternar entre Espectar e Visualizar
+MULTIPLAYERTab:AddToggle({
+    Name = "SPECTATE",
+    Default = false,
+    Callback = function(value)
+        ToggleState = value
+        if ToggleState then
+            -- Ativa a observação do jogador
+            while ToggleState do
+                wait()
+                if PlayerSelected and game.Players[PlayerSelected] and game.Players[PlayerSelected].Character then
+                    local targetCharacter = game.Players[PlayerSelected].Character
+                    local humanoidRootPart = targetCharacter:FindFirstChild("HumanoidRootPart")
+                    if humanoidRootPart then
+                        -- Ajusta a câmera para seguir o jogador
+                        local camera = game.Workspace.CurrentCamera
+                        camera.CameraSubject = humanoidRootPart
+                        -- Atualiza a posição da câmera para seguir o jogador
+                        camera.CFrame = CFrame.new(
+                            camera.CFrame.Position,
+                            humanoidRootPart.Position
+                        )
+                    end
+                end
+            end
+        else
+            -- Retorna a câmera para o controle normal do jogador
+            local camera = game.Workspace.CurrentCamera
+            local playerCharacter = localPlayer.Character
+            if playerCharacter and playerCharacter:FindFirstChild("HumanoidRootPart") then
+                -- Aguardar um curto intervalo para garantir que o jogador esteja totalmente carregado
+                wait(0.1)
+                camera.CameraSubject = playerCharacter.HumanoidRootPart
+                -- Reseta a posição da câmera para o jogador local
+                camera.CFrame = CFrame.new(
+                    playerCharacter.HumanoidRootPart.Position + Vector3.new(0, 5, -10),
+                    playerCharacter.HumanoidRootPart.Position
+                )
+            end
+        end
+    end
+})
+
+-- Eventos para atualizar a lista de jogadores automaticamente
+game.Players.PlayerAdded:Connect(updatePlayerList)
+game.Players.PlayerRemoving:Connect(updatePlayerList)
 
 
-CONFIGTab:AddLabel("                                                SERVER")
+-- Cria a aba e o toggle no OrionLib
+local TeleportTab = Window:MakeTab({
+    Name = "TELEPORT",
+    Icon = "rbxassetid://18702220466", -- Substitua pelo ID correto do ícone
+    PremiumOnly = false
+})
+
+-- Função para teletransportar o jogador para o local especificado
+local function teleportToLobby()
+    local player = game.Players.LocalPlayer
+    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(244.87147521972656, 57.601322174072266, -6.117152690887451)
+    end
+end
+
+-- Adicionar o botão no PlayerTab
+TeleportTab:AddButton({
+    Name = "LOBBY",
+    Callback = function()
+        teleportToLobby()
+    end
+})
+TeleportTab:AddLabel("                                          PLAYER TELEPORT")
+  
+
+local PlayerTP
+local Plr = {}
+local playerDropdown
+
+local function updatePlayerList()
+    -- Limpa a lista anterior
+    Plr = {}
+    -- Popula a lista com os jogadores atuais
+    for _, v in pairs(game:GetService("Players"):GetPlayers()) do
+        if v.Name ~= game.Players.LocalPlayer.Name then
+            table.insert(Plr, v.Name)
+        end
+    end
+    -- Atualiza o jogador selecionado para o primeiro na nova lista
+    PlayerTP = Plr[1] or ""
+    
+    -- Atualiza o dropdown com a nova lista de jogadores
+    if playerDropdown then
+        playerDropdown:Refresh(Plr, true)
+    end
+end
+
+-- Criação inicial do Dropdown com a lista de jogadores
+playerDropdown = TeleportTab:AddDropdown({
+    Name = "SELECT PLAYER",
+    Default = "1",
+    Options = Plr,
+    Callback = function(value)
+        PlayerTP = value
+    end
+})
+
+-- Atualiza a lista de jogadores ao criar o dropdown
+updatePlayerList()
+
+TeleportTab:AddButton({
+    Name = "CLICK TELEPORT",
+    Callback = function()
+        if PlayerTP and game.Players[PlayerTP] and game.Players[PlayerTP].Character and game.Players[PlayerTP].Character:FindFirstChild("HumanoidRootPart") then
+            game.Players.LocalPlayer.Character:MoveTo(game.Players[PlayerTP].Character.HumanoidRootPart.Position)
+        end
+    end
+})
+
+local TPPlayer = false
+TeleportTab:AddToggle({
+    Name = "TELEPORT",
+    Default = false,
+    Callback = function(value)
+        TPPlayer = value
+        while TPPlayer do
+            wait()
+            if PlayerTP and game.Players[PlayerTP] and game.Players[PlayerTP].Character and game.Players[PlayerTP].Character:FindFirstChild("HumanoidRootPart") then
+                game.Players.LocalPlayer.Character:MoveTo(game.Players[PlayerTP].Character.HumanoidRootPart.Position)
+            end
+        end
+    end
+})
+
+-- Eventos para atualizar a lista de jogadores automaticamente
+game.Players.PlayerAdded:Connect(updatePlayerList)
+game.Players.PlayerRemoving:Connect(updatePlayerList)
+
+   
+-- Cria a aba e o toggle no OrionLib
+local CONFIGTab = Window:MakeTab({
+    Name = "CONFIG",
+    Icon = "rbxassetid://18702777518", -- Substitua pelo ID correto do ícone
+    PremiumOnly = false
+})
+
+CONFIGTab:AddLabel("                                                   DISABLE")
+local waterListener
+local monitoringEnabled = false
+
+local function safelyRemoveItem(parent, itemName)
+    local item = parent:FindFirstChild(itemName)
+    if item then
+        pcall(function()
+            item:Destroy()
+        end)
+    end
+end
+
+local function removeWater()
+    local map = workspace:FindFirstChild("Map")
+    if map then
+        local classic = map:FindFirstChild("Classic")
+        if classic then
+            safelyRemoveItem(classic, "Water")
+        end
+    end
+end
+
+local function setupWaterRemover()
+    local map = workspace:WaitForChild("Map")
+    local classic = map:WaitForChild("Classic")
+
+    -- Remove qualquer água existente
+    safelyRemoveItem(classic, "Water")
+
+    -- Configura listener para remover água quando aparecer
+    if waterListener then
+        waterListener:Disconnect()
+    end
+
+    waterListener = classic.ChildAdded:Connect(function(child)
+        if child.Name == "Water" then
+            safelyRemoveItem(classic, "Water")
+        end
+    end)
+end
+
+local function monitorWater()
+    while monitoringEnabled do
+        wait(1)  -- Ajuste o intervalo conforme necessário
+        removeWater()  -- Verifica e remove qualquer água
+    end
+end
+
+-- Botão para remover água e iniciar monitoramento
+CONFIGTab:AddButton({
+    Name = "WATER",
+    Callback = function()
+        if not monitoringEnabled then
+            monitoringEnabled = true
+            setupWaterRemover()  -- Inicia o monitoramento de novos objetos "Water"
+            coroutine.wrap(monitorWater)()  -- Inicia o monitoramento contínuo
+        end
+        removeWater()  -- Remove qualquer água existente no momento
+    end
+})
 
 
 
 
--- FunÃ§Ã£o para reiniciar o jogo
+CONFIGTab:AddLabel("                                                  CODES")
+-- Define os códigos a serem redimidos
+local codes = {"200KLIKES", "250KLIKES"}
+
+-- Função para redimir os códigos
+local function redeemCodes()
+    for _, code in ipairs(codes) do
+        local args = {
+            [1] = "Redeem",
+            [2] = code
+        }
+
+        game:GetService("ReplicatedStorage").ReplicationManagers.CodesRF:InvokeServer(unpack(args))
+    end
+end
+
+-- Cria o botão na aba de controle
+CONFIGTab:AddButton({
+    Name = "REDEEM",
+    Callback = redeemCodes
+})
+
+CONFIGTab:AddLabel("                                                  SERVER")
+
+
+-- Função para reiniciar o jogo
 local function rejoinGame()
     -- Primeiro, desconecta do servidor atual
 
-game:GetService("Players").LocalPlayer:Kick(">SyniX HUB< Rejoining the game...")    -- Depois de um pequeno atraso, reconecta ao servidor com o mesmo mapa
-    wait(0.1)  -- Tempo de espera para garantir que a desconexÃ£o ocorreu
+game:GetService("Players").LocalPlayer:Kick("《SyniX HUB》 Rejoining the game...")    -- Depois de um pequeno atraso, reconecta ao servidor com o mesmo mapa
+    wait(0.1)  -- Tempo de espera para garantir que a desconexão ocorreu
 
-    -- ObtÃ©m o ID do mapa atual e tenta se conectar ao servidor
+    -- Obtém o ID do mapa atual e tenta se conectar ao servidor
     local TeleportService = game:GetService("TeleportService")
     local player = game.Players.LocalPlayer
     TeleportService:Teleport(game.PlaceId, player)
 end
 
--- Adiciona o botÃ£o Ã  aba CONFIG
+-- Adiciona o botão à aba CONFIG
 CONFIGTab:AddButton({
     Name = "REJOIN",
     Callback = function()
-        rejoinGame()  -- Chama a funÃ§Ã£o de rejoin quando o botÃ£o Ã© clicado
+        rejoinGame()  -- Chama a função de rejoin quando o botão é clicado
     end
 })
   
@@ -758,9 +990,9 @@ CONFIGTab:AddButton({
         local actualHour = os.date("!*t").hour
         local S_T = game:GetService("TeleportService")
         local S_H = game:GetService("HttpService")
-        local placeId = game.PlaceId  -- ObtÃ©m automaticamente o ID do jogo atual
+        local placeId = game.PlaceId  -- Obtém automaticamente o ID do jogo atual
 
-        -- Tenta ler o arquivo de IDs de servidores jÃ¡ visitados
+        -- Tenta ler o arquivo de IDs de servidores já visitados
         local File = pcall(function()
             AllIDs = S_H:JSONDecode(readfile("server-hop-temp.json"))
         end)
@@ -779,8 +1011,7 @@ CONFIGTab:AddButton({
 
 local notfic = Instance.new("ScreenGui")
 local backNOT = Instance.new("Frame")
-local UICorner = Instance.new("UICorner"
-                             )
+local UICorner = Instance.new("UICorner")
 local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local div = Instance.new("Frame")
 local div1 = Instance.new("Frame")
@@ -897,17 +1128,17 @@ UIAspectRatioConstraint_6.Parent = textanot
 UIAspectRatioConstraint_6.AspectRatio = 5.080
 UIAspectRatioConstraint_6.DominantAxis = Enum.DominantAxis.Height
 
-local duration = 5 -- DuraÃ§Ã£o da notificaÃ§Ã£o em segundos
+local duration = 5 -- Duração da notificação em segundos
 local endTime = tick() + duration
 
 while tick() < endTime do
     local remainingTime = endTime - tick()
     local scaleFactor = remainingTime / duration
     div1.Size = UDim2.new(scaleFactor, 0, 0.0135650374, 0)
-    wait(0.1) -- Atualize o tamanho a cada 0.1 segundo (vocÃª pode ajustar esse valor conforme necessÃ¡rio)
+    wait(0.1) -- Atualize o tamanho a cada 0.1 segundo (você pode ajustar esse valor conforme necessário)
 end
 
--- Agora que o tempo acabou, vocÃª pode esconder e remover a notificaÃ§Ã£o
+-- Agora que o tempo acabou, você pode esconder e remover a notificação
 div1.Visible = false
 backNOT:Destroy() -- Isso remove o frame completamente
         end
@@ -949,17 +1180,17 @@ backNOT:Destroy() -- Isso remove o frame completamente
                         pcall(function()
                             writefile("server-hop-temp.json", S_H:JSONEncode(AllIDs))
 
-                            -- Execute a animaÃ§Ã£o
+                            -- Execute a animação
                             coroutine.wrap(function()
                                 PlayAnimation()
                             end)()
 
-                            -- Aguarde um intervalo aleatÃ³rio antes de iniciar o teleporte
+                            -- Aguarde um intervalo aleatório antes de iniciar o teleporte
                             local delays = {4.3, 3.9, 3.6}
                             local delay = delays[math.random(1, #delays)] -- Escolhe aleatoriamente um dos intervalos
-                            wait(delay) -- Ajuste conforme necessÃ¡rio para garantir que o teleporte ocorra antes da animaÃ§Ã£o terminar
+                            wait(delay) -- Ajuste conforme necessário para garantir que o teleporte ocorra antes da animação terminar
 
-                            -- ApÃ³s o intervalo, realize o teleporte
+                            -- Após o intervalo, realize o teleporte
                             S_T:TeleportToPlaceInstance(placeId, ID, game.Players.LocalPlayer)
                         end)
                         wait(4) -- Pequena espera antes de tentar novamente
@@ -969,7 +1200,7 @@ backNOT:Destroy() -- Isso remove o frame completamente
             end
         end
 
-        -- Inicia o processo de teleporte ao clicar no botÃ£o
+        -- Inicia o processo de teleporte ao clicar no botão
         pcall(function()
             TPReturner()
             while foundAnything ~= "" do
@@ -978,7 +1209,6 @@ backNOT:Destroy() -- Isso remove o frame completamente
         end)
     end
 })
-                                                   
-                                                   
-                                                   CONFIGTab:AddLabel("                                                 SOON")
+                                                 
+                                                   CONFIGTab:AddLabel("                                                   SOON")
 end
