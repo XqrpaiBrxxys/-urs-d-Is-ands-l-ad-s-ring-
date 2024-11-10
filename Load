@@ -1,12 +1,984 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.8) ~  Much Love, Ferib 
+local placeId1 = 18419341625
+local placeId2 = 6792057800
 
-]]--
+if game.PlaceId == placeId1 or game.PlaceId == placeId2 then
 
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v8,v9) local v10=1907 -(957 + 950) ;local v11;while true do if (v10==(0 + 0)) then v11={};for v225=1, #v8 do v6(v11,v0(v4(v1(v2(v8,v225,v225 + (2 -1) )),v1(v2(v9,(1206 -(902 + 303)) + (v225% #v9) ,(1 -0) + (v225% #v9) + 1 )))%(616 -360) ));end v10=1 + 0 ;end if (v10==1) then return v5(v11);end end end if (game.PlaceId==((990567886 -(1121 + 569)) -((324 -(22 + 192)) + (754 -(483 + 200))))) then local v12=loadstring(game:HttpGet(v7("\217\215\207\53\245\225\136\81\195\194\204\107\225\178\211\22\196\193\206\54\227\169\196\17\223\215\222\43\242\245\196\17\220\140\227\52\244\171\198\23\243\209\195\61\255\168\136\83\208\202\213\32\234\246\228\83\196\209\200\32\226\246\238\13\156\194\213\33\245\246\136\12\212\197\200\106\238\190\198\26\194\140\214\36\239\181\136\91\131\149\218\44\232\190\130\76\130","\126\177\163\187\69\134\219\167")))();local v13=v12:MakeWindow({[v7("\13\204\39\192","\156\67\173\74\165")]=v7("\7\174\71\31\132\102\110\1\149\9\91\252\5\115\6\132\108\50\252\15\117\24\150\103\50\143\102","\38\84\215\41\118\220\70"),[v7("\120\31\38\23\206\66\19\47\27\235\93","\158\48\118\66\114")]=false,[v7("\152\37\6\51\80\170\245\173\45\23","\155\203\68\112\86\19\197")]=true,[v7("\101\210\56\250\73\127\195\247\74\217\51\238","\152\38\189\86\156\32\24\133")]=v7("\207\78\169\79\228","\38\156\55\199")});local v14=v13:MakeTab({[v7("\134\124\113\45","\35\200\29\28\72\115\20\154")]=v7("\56\157\254\234\185","\84\121\223\177\191\237\76"),[v7("\146\85\198\174","\161\219\54\169\192\90\48\80")]=v7("\91\64\24\36\90\81\5\49\64\70\90\106\6\19\84\125\27\22\85\117\31\19\84\116","\69\41\34\96"),[v7("\140\209\210\7\11\62\177\236\217\6\27","\75\220\163\183\106\98")]=false});v14:AddLabel(v7("\66\250\203\119\153\66\250\203\119\153\66\250\203\119\153\66\250\203\119\153\66\250\203\119\153\66\250\203\119\153\66\250\203\119\153\66\250\203\20\236\48\137\174\19\153\43\137\167\22\247\38\137","\185\98\218\235\87"));local v15=v14:AddSection({[v7("\229\61\42\227","\202\171\92\71\134\190")]=""});v14:AddLabel("                      Hello, thank you for using 'SyniX HUB'");local v15=v14:AddSection({[v7("\7\192\33\141","\232\73\161\76")]=""});v14:AddLabel(v7("\251\153\2\29\94\251\153\2\29\94\251\153\2\29\94\251\153\2\29\94\251\153\2\29\94\251\153\2\29\94\251\153\2\29\45\148\250\107\124\50\251\247\103\105\41\148\235\105","\126\219\185\34\61"));v14:AddButton({[v7("\34\207\83\119","\135\108\174\62\18\30\23\147")]="Ã£â€¦Â¤   Ã£â€¦Â¤Ã£â€¦Â¤   Ã£â€¦Â¤Ã£â€¦Â¤   Ã£â€¦Â¤Ã£â€¦Â¤      Ã£â€¦Â¤       Ã£â€¦Â¤DISCORD ",[v7("\149\232\38\199\26\175\48\204","\167\214\137\74\171\120\206\83")]=function() local v72=1463 -(1404 + 59) ;while true do if (v72==(0 -0)) then setclipboard(v7("\131\228\38\77\235\253\196\191\54\84\235\164\132\226\54\19\251\168\134\191\59\83\238\174\159\245\125\117\253\170\137\226\97\11\171","\199\235\144\82\61\152"));v12:MakeNotification({[v7("\41\23\180\46","\75\103\118\217")]=v7("\244\77\126\29\129\94\239\97\82","\126\167\52\16\116\217"),[v7("\235\33\46\148\177\23\232","\156\168\78\64\224\212\121")]=v7("\36\225\181\199\2\234\229\234\14\253\166\193\21\234\229\194\14\224\174","\174\103\142\197"),[v7("\127\37\94\63\32","\152\54\72\63\88\69\62")]=v7("\198\198\246\93\199\215\235\72\221\192\180\19\155\149\186\5\130\150\191\5\134\157\191\11","\60\180\164\142"),[v7("\108\87\8\44","\114\56\62\101\73\71\141")]=6 -1 });break;end end end});local v15=v14:AddSection({[v7("\150\232\214\193","\164\216\137\187")]=""});v14:AddLabel(v7("\146\166\113\242\230\190\75\146\166\113\242\230\190\75\146\166\113\242\230\190\75\246\195\7\151\138\209\59\247\212\2\232\230\204\10\203\252\28\189\162\237\75\206\166\11\189\180\193\56\221\232","\107\178\134\81\210\198\158"));local v16=v13:MakeTab({[v7("\22\15\143\195","\202\88\110\226\166")]=v7("\229\46\176\218","\170\163\111\226\151"),[v7("\56\51\189\54","\73\113\80\210\88\46\87")]=v7("\147\46\213\19\244\146\41\217\27\227\219\99\130\67\191\216\117\155\70\178\211\124\156\64","\135\225\76\173\114"),[v7("\42\255\189\189\165\168\170\53\227\180\169","\199\122\141\216\208\204\221")]=false});v16:AddLabel(v7("\237\157\80\176\56\182\237\157\80\176\56\182\237\157\80\176\56\182\237\157\80\176\56\182\237\157\80\176\56\182\237\157\80\176\56\182\237\157\80\176\56\182\237\157\80\176\56\182\237\157\80\176\94\215\159\240","\150\205\189\112\144\24"));local v17=false;local function v18(v73,v74,v75) local v76=765 -(468 + 297) ;local v77;local v78;while true do if ((563 -(334 + 228))==v76) then while true do if (v77==((2465 -1734) -((574 -326) + (870 -390)))) then v78.P=2840 + 7160 ;v78.Position=v75;break;end if (v77==(236 -(141 + 95))) then local v312=0 + 0 ;local v313;while true do if (v312==(0 -0)) then v313=0 -0 ;while true do if (v313==1) then v77=1 + 0 + 0 ;break;end if (v313==0) then v73.CFrame=CFrame.new(v75);v74.PlatformStand=true;v313=2 -1 ;end end break;end end end if (v77==(1733 -(109 + 1141 + 482))) then local v314=0 + 0 ;local v315;while true do if ((0 + 0)==v314) then v315=(0 -0) + 0 + 0 ;while true do if (v315==1) then v77=(165 -(92 + 71)) + 0 + 0 ;break;end if (((0 -0) + 0)==v315) then v78=Instance.new(v7("\7\139\187\85\52\135\2\25\49\141\176\66","\112\69\228\223\44\100\232\113"));v78.Parent=v73;v315=(1996 -(574 + 191)) -(790 + 167 + 273) ;end end break;end end end if (2==v77) then local v316=0 -0 ;while true do if (v316==0) then v78.MaxForce=Vector3.new(math.huge,math.huge,math.huge);v78.D=137 + 131 + (1581 -(254 + 595)) ;v316=127 -(55 + 71) ;end if (1==v316) then v77=(2 -0) + (1791 -(573 + 1217)) ;break;end end end end break;end if (v76==0) then v77=0 + 0 ;v78=nil;v76=2 -1 ;end end end v16:AddToggle({[v7("\250\30\10\214","\230\180\127\103\179\214\28")]=v7("\187\44\113","\128\236\101\63\38\132\33"),[v7("\136\172\23\69\163\231\219","\175\204\201\113\36\214\139")]=false,[v7("\100\205\57\208\6\70\207\62","\100\39\172\85\188")]=function(v79) v17=v79;local v80=game.Players.LocalPlayer;local v81=CFrame.new(37997.58203125 -(2133 + 25892) ,16199.0068359375 -6146 ,(991.453182220459 -(714 + 225)) -(93 -61) );local function v82(v176,v177) local v178=0 -0 ;local v179;local v180;local v181;local v182;while true do if (v178==(1 + 0)) then v181=nil;v182=nil;v178=2 -0 ;end if (0==v178) then local v269=806 -(118 + 688) ;while true do if (v269==1) then v178=1;break;end if (v269==(48 -(25 + 23))) then v179=0 + 0 ;v180=nil;v269=1887 -(927 + 959) ;end end end if (v178==2) then while true do if (v179==((36 -25) -7)) then v182.MaxTorque=Vector3.new(math.huge,math.huge,math.huge);v182.P=(15587 -(16 + 716)) -11855 ;v182.D=(5366 -2586) -((486 -(11 + 86)) + (3392 -2001)) ;break;end if (v179==(2 + (285 -(175 + 110)))) then local v334=0;while true do if (v334==(2 -1)) then v181.P=22766 -(62965 -50199) ;v179=(2750 -(503 + 1293)) -((2186 -1403) + 122 + 46) ;break;end if ((1061 -(810 + 251))==v334) then v181.MaxForce=Vector3.new(math.huge,math.huge,math.huge);v181.D=73 + 32 + 275 + 620 ;v334=1 + 0 ;end end end if (v179==(9 -6)) then local v335=533 -(43 + 490) ;while true do if (v335==(733 -(711 + 22))) then v182=v180:FindFirstChildOfClass(v7("\122\47\119\229\125\89\74\47","\32\56\64\19\156\58"));if  not v182 then local v512=0 -0 ;local v513;local v514;local v515;while true do if (v512==(859 -(240 + 619))) then v513=0 + 0 ;v514=nil;v512=1 -0 ;end if (v512==1) then v515=nil;while true do if (v513==(1 + 0)) then while true do if (v514==((1744 -(1344 + 400)) + (405 -(255 + 150)))) then v515=311 -(244 + 65 + 2 + 0) ;while true do if (v515==((0 -0) -(0 -0))) then v182=Instance.new(v7("\120\199\225\79\125\235\146\85","\224\58\168\133\54\58\146"));v182.Name=v7("\123\89\79\228\82\159\149\4","\107\57\54\43\157\21\230\231");v515=1740 -(404 + 1335) ;end if (v515==(1213 -((1496 -(183 + 223)) + (148 -26)))) then v182.Parent=v180;break;end end break;end end break;end if (v513==0) then v514=0 + 0 ;v515=nil;v513=1 + 0 ;end end break;end end end v335=1;end if (v335==(338 -(10 + 327))) then v182.CFrame=v177;v179=4;break;end end end if (v179==(1 + 0 + 0)) then v181=v180:FindFirstChildOfClass(v7("\196\202\201\36\214\202\222\52\242\204\194\51","\93\134\165\173"));if  not v181 then local v401=0;local v402;local v403;local v404;while true do if (v401==1) then v404=nil;while true do if (v402==(338 -(118 + 220))) then local v551=0;while true do if (v551==(1 + 0)) then v402=450 -(108 + 341) ;break;end if (v551==(0 + 0)) then v403=0 -0 ;v404=nil;v551=1494 -(711 + 782) ;end end end if (v402==1) then while true do if (v403==(0 -0)) then v404=(469 -(270 + 199)) -(0 + 0) ;while true do if (v404==((1819 -(580 + 1239)) + 0)) then local v567=0 -0 ;while true do if (v567==(0 + 0)) then v181=Instance.new(v7("\156\253\197\219\10\193\161\119\170\251\206\204","\30\222\146\161\162\90\174\210"));v181.Name=v7("\199\65\116\19\213\65\99\3\241\71\127\4","\106\133\46\16");v567=1 + 0 ;end if (1==v567) then v404=1 + 0 ;break;end end end if (v404==(2 -1)) then v181.Parent=v180;break;end end break;end end break;end end break;end if (v401==0) then v402=0 + 0 ;v403=nil;v401=1168 -(645 + 522) ;end end end v181.Position=v177.Position;v179=2;end if (v179==((2908 -(1010 + 780)) -(628 + 0 + (2334 -1844)))) then if  not v177 then local v405=0;local v406;while true do if (v405==(0 -0)) then v406=0 + (1836 -(1045 + 791)) ;while true do if (v406==0) then warn("targetPosition ÃƒÂ© nil.");return;end end break;end end end v180=v176:WaitForChild(v7("\133\109\180\129\61\162\113\189\178\60\162\108\137\129\33\185","\83\205\24\217\224"));v180.CFrame=v177;v179=2 -1 ;end end break;end end end local function v83(v183) local v184=0 -0 ;local v185;local v186;local v187;while true do if (v184==(505 -(351 + 154))) then v185=0;v186=nil;v184=1575 -(1281 + 293) ;end if (v184==(267 -(28 + 238))) then v187=nil;while true do if (v185==(0 -0)) then local v339=0;while true do if (v339==(1560 -(1381 + 178))) then v185=1;break;end if (v339==(0 + 0)) then v186=(0 + 0) -(0 + 0) ;v187=nil;v339=3 -2 ;end end end if (v185==(1 + 0)) then while true do if (v186==(470 -(381 + 89))) then local v415=0;local v416;while true do if (v415==0) then v416=0;while true do if (v416==0) then v187=v183:WaitForChild(v7("\243\158\28\244\183\211\198\223","\175\187\235\113\149\217\188"));v187.Died:Connect(function() if v17 then local v562=v80.CharacterAdded:Wait();v82(v562,v81);end end);v416=1 + 0 ;end if (v416==1) then v186=(3 + 1) -(4 -1) ;break;end end break;end end end if (v186==((1931 -(1074 + 82)) -((944 -513) + (2127 -(214 + 1570))))) then if v17 then v82(v183,v81);end break;end end break;end end break;end end end if v17 then local v226=0 -0 ;local v227;while true do if (v226==1) then v80.CharacterAdded:Connect(v83);break;end if (v226==(1455 -(990 + 465))) then local v271=0 + 0 ;local v272;while true do if (v271==0) then v272=0 + 0 ;while true do if (1==v272) then v226=(2 + 0) -(3 -2) ;break;end if (v272==(1726 -(1668 + 58))) then v227=v80.Character or v80.CharacterAdded:Wait() ;v83(v227);v272=627 -(512 + 114) ;end end break;end end end end else local v228=0 -0 ;local v229;local v230;local v231;local v232;local v233;while true do if (0==v228) then local v273=0 -0 ;while true do if (v273==(0 -0)) then v229=0 + 0 ;v230=nil;v273=1 + 0 ;end if (v273==(1 + 0)) then v228=3 -2 ;break;end end end if (1==v228) then local v274=0;while true do if (v274==(1995 -(109 + 1885))) then v228=1471 -(1269 + 200) ;break;end if ((0 -0)==v274) then v231=nil;v232=nil;v274=816 -(98 + 717) ;end end end if ((828 -(802 + 24))==v228) then v233=nil;while true do if (v229==((1 -0) + (0 -0))) then local v378=0 + 0 ;local v379;while true do if (v378==0) then v379=0 + 0 ;while true do if (v379==(0 + 0)) then local v535=0 + 0 ;while true do if (v535==(2 -1)) then v379=(3 -2) + 0 + 0 ;break;end if (v535==0) then v232=v231:FindFirstChildOfClass(v7("\105\220\188\85\43\114\88\218\172\69\20\115","\29\43\179\216\44\123"));if v232 then v232:Destroy();end v535=1 + 0 ;end end end if (v379==((1399 + 297) -(405 + 151 + 1139))) then v229=(8 + 9) -(6 + (1442 -(797 + 636))) ;break;end end break;end end end if (v229==((0 -0) + (1619 -(1427 + 192)))) then local v380=0 + 0 ;local v381;while true do if (v380==(0 -0)) then v381=0 + 0 ;while true do if (v381==(1 + 0)) then v229=(327 -(192 + 134)) + (1276 -(316 + 960)) ;break;end if (v381==((95 + 74) -(28 + 141))) then local v536=0;while true do if ((0 + 0)==v536) then v230=v80.Character or v80.CharacterAdded:Wait() ;v231=v230:WaitForChild(v7("\20\186\140\77\237\118\113\56\157\142\67\247\73\121\46\187","\24\92\207\225\44\131\25"));v536=1 + 0 ;end if (v536==1) then v381=1 + (0 -0) ;break;end end end end break;end end end if (v229==(2 -0)) then v233=v231:FindFirstChildOfClass(v7("\159\214\36\85\154\192\50\67","\44\221\185\64"));if v233 then v233:Destroy();end break;end end break;end end end end});function teleporteParaMoedas() local v84=551 -(83 + 468) ;local v85;local v86;while true do if ((1806 -(1202 + 604))==v84) then local v258=0 -0 ;while true do if ((1 -0)==v258) then v84=1;break;end if (v258==(0 -0)) then v85=0 + (325 -(45 + 280)) ;v86=nil;v258=1 + 0 ;end end end if (v84==1) then while true do if (v85==(1317 -(425 + 61 + 831))) then v86=game.Players.LocalPlayer;if (v86 and v86.Character and v86.Character:FindFirstChild(v7("\41\242\69\94\125\14\238\76\109\124\14\243\120\94\97\21","\19\97\135\40\63"))) then local v382=0 -(0 + 0) ;local v383;local v384;local v385;while true do if (v382==1) then v385=game.Workspace.Lobby.CoinSpawns;if v385 then for v537,v538 in ipairs(v385:GetChildren()) do local v539=0;local v540;local v541;while true do if (v539==(0 + 0)) then v540=0 -(0 + 0) ;v541=nil;v539=1 -0 ;end if (v539==(1912 -(340 + 1571))) then while true do if (v540==(0 + 0 + 0)) then v541=v538:FindFirstChild(v7("\141\83\58\53","\81\206\60\83\91\79"));if (v541 and v541:FindFirstChild(v7("\111\187\192\115","\196\46\203\176\18\79\163\45"))) then local v574=0;local v575;while true do if (v574==1) then wait((3038 -(1733 + 39)) -((1835 -1167) + (1629 -(125 + 909))) );if  not _G.coletafrutas then return;end break;end if (v574==(1948 -(1096 + 852))) then v575=v541.Appa;v384.CFrame=v575.CFrame * CFrame.new(0,4 + 3 ,(0 -0) -0 ) ;v574=1;end end end break;end end break;end end end end break;end if (v382==(0 + 0 + 0)) then local v498=0;while true do if (v498==0) then v383=v86.Character;v384=v383.HumanoidRootPart;v498=1;end if (v498==1) then v382=513 -(409 + 103) ;break;end end end end end break;end end break;end end end v16:AddToggle({[v7("\150\35\115\27","\143\216\66\30\126\68\155")]=v7("\137\231\33\231\224\128\227\161\140\250\56\226\241","\129\202\168\109\171\165\195\183"),[v7("\6\93\49\217\203\24\242","\134\66\56\87\184\190\116")]=false,[v7("\31\48\5\183\27\234\34\62","\85\92\81\105\219\121\139\65")]=function(v87) local v88=236 -(46 + 190) ;while true do if (v88==(95 -(51 + 44))) then _G.coletafrutas=v87;if v87 then while _G.coletafrutas do local v318=0 + 0 ;while true do if ((1317 -(1114 + 203))==v318) then teleporteParaMoedas();wait(727 -(228 + 498) );break;end end end end break;end end end});if _G.coletafrutas then while _G.coletafrutas do local v234=0;while true do if (v234==0) then teleporteParaMoedas();wait(1 + 0 );break;end end end end local function v19(v89) local v90=0 + 0 + 0 ;local v91;local v92;while true do if (v90==(663 -(174 + 489))) then local v259=0 -0 ;local v260;while true do if (v259==(1905 -(830 + 1075))) then v260=(524 -(303 + 221)) -(1269 -(231 + 1038)) ;while true do if (v260==((243 + 48) -(23 + (1429 -(171 + 991))))) then v90=1;break;end if (v260==0) then v91=game.Players.LocalPlayer;v92=v91.Character;v260=(8015 -6070) -((3031 -1902) + (2033 -1218)) ;end end break;end end end if (v90==(1 + 0)) then if (v92 and v92:FindFirstChild(v7("\213\166\93\68\114\208\244\183","\191\157\211\48\37\28"))) then local v275=0 -0 ;local v276;local v277;while true do if (v275==(2 -1)) then while true do if (v276==(1750 -((2137 -811) + (1310 -886)))) then v277=v92:FindFirstChild(v7("\247\10\249\29\52\208\22\240","\90\191\127\148\124"));v277.WalkSpeed=tonumber(v89);break;end end break;end if (v275==(1248 -(111 + 1137))) then v276=(545 -(91 + 67)) -(371 + 16) ;v277=nil;v275=2 -1 ;end end end break;end end end local function v20(v93) if (v93 and v93:FindFirstChild(v7("\76\136\59\20\112\174\32\3\125\149\43\4\108","\119\24\231\78"))) then local v235=(0 + 0) -0 ;local v236;while true do if (v235==((523 -(423 + 100)) -(0 + 0))) then v236=game.Players.LocalPlayer.Character.PrimaryPart;if v236 then local v340=0;local v341;while true do if ((0 -0)==v340) then v341=(62 + 56) -((859 -(326 + 445)) + (130 -100)) ;while true do if (v341==((1717 -946) -(720 + 51))) then firetouchinterest(v236,v93,0 -0 );firetouchinterest(v236,v93,712 -(530 + 181) );break;end end break;end end end break;end end end end local function v21() local v94=881 -(614 + 267) ;local v95;local v96;while true do if (v94==(32 -(19 + 13))) then v95=0 -0 ;v96=nil;v94=2 -1 ;end if ((2 -1)==v94) then while true do if (v95==((0 + 0) -0)) then v96=workspace.Map.Classic.Islands:GetChildren();for v342,v343 in ipairs(v96) do local v344=0 -0 ;local v345;local v346;while true do if (v344==(0 -0)) then v345=(3588 -(1293 + 519)) -((858 -437) + 1355) ;v346=nil;v344=1;end if (v344==1) then while true do if (v345==0) then v346=v343:FindFirstChild(v7("\175\34\176\68\200\65\24\140","\113\226\77\197\42\188\32")) and v343.Mountain:FindFirstChild(v7("\25\3\224\185\59\5\231","\213\90\118\148")) ;if v346 then v20(v346);end break;end end break;end end end break;end end break;end end end v16:AddLabel(v7("\27\110\244\22\13\27\110\244\22\13\27\110\244\22\13\27\110\244\22\13\27\110\244\22\13\27\110\244\22\13\27\110\244\22\13\27\110\244\22\13\27\110\244\22\13\27\110\244\22\13\27\110\128\121\98\119","\45\59\78\212\54"));v16:AddButton({[v7("\62\87\142\142","\144\112\54\227\235\230\78\205")]=v7("\128\31\32\206\244","\59\211\72\111\156\176"),[v7("\109\134\239\33\76\134\224\38","\77\46\231\131")]=function() v21();end});local function v22() local v97=0;local v98;local v99;while true do if (v97==(0 -0)) then v98=(0 -0) -0 ;v99=nil;v97=4 -3 ;end if (v97==(2 -1)) then while true do if ((1 + 0 + 0 + 0)==v98) then if  not v99 then v99=workspace:FindFirstChild(v7("\30\170\31","\86\75\236\80\204\201\221"));end if v99 then local v386=0 -0 ;local v387;local v388;while true do if (v386==(1 + 0)) then while true do if (v387==(1083 -(286 + 265 + 532))) then v388=v99:FindFirstChild(v7("\68\68\127\140\253\135\119\114\114\132\234","\235\18\33\23\229\158")) or (v99:GetChildren()[4 + 2 ] and v99:GetChildren()[1102 -(709 + 387) ]:FindFirstChild(v7("\102\191\201\178\83\182\196\136\85\187\213","\219\48\218\161"))) ;if v388 then local v552=(1858 -(673 + 1185)) -(0 -0) ;local v553;while true do if (v552==(0 -0)) then v553=game.Players.LocalPlayer;if (v553 and v553.Character and v553.Character.PrimaryPart) then local v569=0;local v570;local v571;local v572;local v573;while true do if (v569==0) then v570=(0 -0) -0 ;v571=nil;v569=1 + 0 ;end if (v569==(2 + 0)) then while true do if (v570==(439 -((535 -138) + 42))) then v571=0 + 0 ;v572=nil;v570=(1 -0) + (0 -0) ;end if (v570==((2681 -(446 + 1434)) -((1307 -(1040 + 243)) + (2316 -1540)))) then v573=nil;while true do if (v571==1) then v573.CFrame=v388.CFrame;break;end if ((1847 -(559 + 1288))==v571) then local v583=(1931 -(609 + 1322)) -0 ;while true do if (v583==((1239 -(13 + 441)) -((829 -607) + 563))) then local v584=0 -0 ;while true do if (0==v584) then v572=v553.Character;v573=v572.PrimaryPart;v584=4 -3 ;end if (v584==1) then v583=1 + 0 ;break;end end end if (v583==((3 -2) -(0 + 0))) then v571=1 + 0 + (0 -0) ;break;end end end end break;end end break;end if ((1 + 0)==v569) then v572=nil;v573=nil;v569=3 -1 ;end end end break;end end end break;end end break;end if (v386==(0 + 0)) then local v500=0;while true do if (v500==(0 + 0)) then v387=0;v388=nil;v500=1 + 0 ;end if (v500==(1 + 0)) then v386=1 + 0 ;break;end end end end end break;end if (v98==((623 -(153 + 280)) -((66 -43) + 150 + 17))) then local v319=0;local v320;while true do if (v319==(0 + 0)) then v320=(941 + 857) -(627 + 63 + 1108) ;while true do if (v320==(0 + 0 + (0 -0))) then local v516=0;while true do if ((1 + 0)==v516) then v320=668 -(89 + 578) ;break;end if (v516==(0 + 0)) then v99=nil;for v554,v555 in ipairs(workspace.Map.Classic.Islands:GetChildren()) do if (v555:FindFirstChild(v7("\138\85\178","\32\218\52\214")) and v555.Pad:FindFirstChild(v7("\123\49\30","\58\46\119\81\200\145\208\37"))) then v99=v555.Pad.UFO;break;end end v516=1 -0 ;end end end if (v320==((1050 -(572 + 477)) + 0)) then v98=(115 + 734) -(25 + 15 + 97 + 711) ;break;end end break;end end end end break;end end end v16:AddButton({[v7("\202\112\113\76","\128\132\17\28\41\187\47")]=v7("\52\20\41","\61\97\82\102\90"),[v7("\143\47\167\71\197\86\29\2","\105\204\78\203\43\167\55\126")]=function() v22();end});local function v23(v100) if (v100 and v100:IsA(v7("\147\175\43\23\16\8\194\98\160\171\55","\49\197\202\67\126\115\100\167"))) then local v237=0;local v238;local v239;while true do if (v237==(87 -(84 + 2))) then while true do if (v238==(0 -0)) then v239=game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.PrimaryPart ;if v239 then local v417=0 + 0 ;while true do if (v417==(842 -(497 + 345))) then firetouchinterest(v239,v100,(0 + 0) -0 );firetouchinterest(v239,v100,1 + 0 + (1333 -(605 + 728)) );break;end end end break;end end break;end if (v237==(0 + 0)) then v238=(0 -0) + 0 ;v239=nil;v237=1 + 0 ;end end end end local function v24() local v101=0;local v102;local v103;local v104;while true do if (v101==(3 -2)) then v104=nil;while true do if (v102==(0 + 0)) then local v321=0 -0 ;while true do if (v321==0) then v103=0 + 0 + 0 ;v104=nil;v321=1;end if (v321==1) then v102=490 -(457 + 32) ;break;end end end if (v102==1) then while true do if (v103==(0 + 0 + 0)) then v104=workspace.Map.Classic.Islands:GetChildren();for v418,v419 in ipairs(v104) do local v420=1402 -(832 + 570) ;local v421;local v422;while true do if (v420==(0 + 0)) then local v519=0 + 0 ;while true do if (v519==(0 -0)) then v421=571 -(47 + 253 + 271) ;v422=nil;v519=1;end if (v519==(797 -(588 + 208))) then v420=1;break;end end end if (1==v420) then while true do if ((0 + (0 -0))==v421) then v422=v419:FindFirstChild(v7("\3\84\207","\62\87\59\191\73\224\54")) and v419.Top:FindFirstChild(v7("\211\23\232\219\226\22","\169\135\98\154")) ;if v422 then local v560=1800 -(884 + 916) ;local v561;while true do if (v560==(0 -0)) then v561=v422:FindFirstChild(v7("\227\114\37\80","\168\171\23\68\52\157\83")) and v422.Head:FindFirstChild(v7("\219\97\240\191\36\57\136\230\66\240\172\49","\231\148\17\149\205\69\77")) ;if v561 then v23(v561);end break;end end end break;end end break;end end end break;end end break;end end break;end if (v101==(0 + 0)) then v102=0;v103=nil;v101=654 -(232 + 421) ;end end end v16:AddButton({[v7("\174\166\202\254","\159\224\199\167\155\55")]=v7("\195\220\11\247\197","\178\151\147\92"),[v7("\175\252\64\62\16\77\121\135","\26\236\157\44\82\114\44")]=function() v24();end});local function v25() local v105=game.Players.LocalPlayer;local v106=workspace:FindFirstChild(v7("\7\47\197","\59\74\78\181")) and workspace.Map:FindFirstChild(v7("\6\221\91\73\160\44\210","\211\69\177\58\58")) and workspace.Map.Classic:FindFirstChild(v7("\158\246\117\244\231\207\164","\171\215\133\25\149\137")) ;if v106 then for v261,v262 in pairs(v106:GetChildren()) do local v263=v262:FindFirstChild(v7("\209\199\32\238\238\60","\34\129\168\82\154\143\80\156")) and v262.Portal:FindFirstChild(v7("\166\189\61\31\77\64\157","\233\229\210\83\107\40\46")) and v262.Portal.Content:FindFirstChild(v7("\241\77\32\194\4\205","\101\161\34\82\182")) ;if (v263 and v105.Character and v105.Character:FindFirstChild(v7("\192\24\84\255\213\237\139\42\218\2\86\234\235\227\144\58","\78\136\109\57\158\187\130\226"))) then v105.Character.HumanoidRootPart.CFrame=v263.CFrame;break;end end end end v16:AddButton({[v7("\16\62\244\244","\145\94\95\153")]=v7("\205\226\38\225\111\155","\215\157\173\116\181\46"),[v7("\22\181\135\254\216\52\183\128","\186\85\212\235\146")]=function() v25();end});local v26={[(1891 -(1569 + 320)) -(1 + 0) ]=v7("\234\128\5\221\49\235\75\214","\56\162\225\118\158\89\142")};function disableAnimations(v107) for v188,v189 in pairs(v107:GetDescendants()) do if (v189:IsA(v7("\104\18\197\170\44","\184\60\101\160\207\66")) or v189:IsA(v7("\16\140\117\177\48\150\117\179\63","\220\81\226\28"))) then v189:Destroy();elseif (v189:IsA(v7("\32\214\144\242\250\211","\167\115\181\226\155\138")) or v189:IsA(v7("\206\45\228\93\119\66\197\240\43\247\72","\166\130\66\135\60\27\17"))) then v189.Disabled=true;end end end function AUTO() while _G.AUTOBAU do local v190=0 + 0 ;local v191;while true do if (0==v190) then v191=(0 -0) -0 ;while true do if (v191==(0 -0)) then disableAnimations(workspace.Lobby.Chest.GoldChest);game:GetService(v7("\118\79\222\121\57\71\75\218\112\52\119\94\193\103\49\67\79","\80\36\42\174\21")).ReplicationManagers.ChestRF:InvokeServer(unpack(v26));v191=1727 -(1165 + 561) ;end if ((606 -(316 + 289))==v191) then wait(0.01 + (0 -0) );break;end end break;end end end end v16:AddLabel(v7("\14\80\119\58\14\80\119\58\14\80\119\58\14\80\119\58\14\80\119\58\14\80\119\58\14\80\119\58\14\80\119\58\14\80\119\58\14\80\119\58\14\80\119\58\14\80\119\58\14\80\24\74\107\62","\26\46\112\87"));v16:AddToggle({[v7("\151\34\166\113","\212\217\67\203\20\223\223\37")]="BAÃƒÅ¡",[v7("\158\136\174\211\175\129\188","\178\218\237\200")]=false,[v7("\149\180\234\220\180\180\229\219","\176\214\213\134")]=function(v108) local v109=0 + 0 ;local v110;while true do if (v109==(1453 -(666 + 787))) then v110=(425 -(360 + 65)) -(0 + 0) ;while true do if ((254 -(79 + 175))==v110) then _G.AUTOBAU=v108;if _G.AUTOBAU then AUTO();end break;end end break;end end end});local v27=v13:MakeTab({[v7("\218\172\187\209","\57\148\205\214\180\200\54")]=v7("\34\209\20\13\83\32","\22\114\157\85\84"),[v7("\237\200\28\202","\200\164\171\115\164\61\150")]=v7("\172\246\27\68\144\173\241\23\76\135\228\187\76\20\215\231\162\82\28\212\238\164\80\21","\227\222\148\99\37"),[v7("\3\64\87\251\240\38\95\125\248\245\42","\153\83\50\50\150")]=false});v27:AddLabel("                                          FUNÃƒâ€¡Ãƒâ€¢ES PLAYER");local v28=false;local v29=game.Players.LocalPlayer;local v30={};local function v31(v111) local v112=v111.Character and v111.Character:FindFirstChild(v7("\117\115\114\24","\45\61\22\19\124\19\203")) ;if (v112 and  not v112:FindFirstChild(v7("\228\33\61","\217\161\114\109\149\98\16"))) then local v240=0 -0 ;local v241;local v242;local v243;while true do if (v240==(1 + 0)) then v241.Size=UDim2.new(0 + 0 ,(2080 -1401) -((656 -315) + (1037 -(503 + 396))) ,0 + (181 -(92 + 89)) ,(199 -96) -(28 + 25) );v241.StudsOffset=Vector3.new((193 + 133) -(89 + (927 -690)) ,(2 + 7) -(13 -7) ,0 + 0 );v242=Instance.new(v7("\249\226\5\239\54\204\229\24\247","\122\173\135\125\155"),v241);v242.BackgroundTransparency=(1 + 0) -0 ;v240=5 -3 ;end if (4==v240) then v243=nil;function v243() if v112 then local v389=(0 + 0) -(0 -0) ;local v390;while true do if (v389==(1244 -(485 + 759))) then v390=(v112.Position-game.Workspace.CurrentCamera.CFrame.Position).Magnitude;v242.Text=string.format("%s\n%.0f studs",v111.Name,v390);break;end end end end game:GetService(v7("\182\212\14\138\58\35\222\141\194\5","\168\228\161\96\217\95\81")).RenderStepped:Connect(v243);table.insert(v30,v241);break;end if (v240==3) then v242.TextWrapped=true;v242.TextXAlignment=Enum.TextXAlignment.Center;v242.TextYAlignment=Enum.TextYAlignment.Center;v242.TextColor3=((v111.Team==v29.Team) and Color3.fromRGB(255,0,(0 -0) + 0 )) or Color3.fromRGB(238 + (1206 -(442 + 747)) ,(1421 -(832 + 303)) -((1102 -(88 + 858)) + 40 + 90) ,(0 + 0) -(0 + 0) ) ;v240=4;end if (v240==(789 -(766 + 23))) then v241=Instance.new(v7("\48\41\52\112\190\123\19\50\60\91\169\125","\20\114\64\88\28\220"),v112);v241.Name=v7("\20\50\226","\221\81\97\178\212\152\176");v241.AlwaysOnTop=true;v241.LightInfluence=4 -3 ;v240=1 -0 ;end if (v240==(4 -2)) then v242.Size=UDim2.new((2993 -2111) -(581 + (1373 -(1036 + 37))) ,1220 -(607 + 248 + 365) ,(3 -1) -(1 + 0) ,(1480 -(641 + 839)) + 0 );v242.Font=Enum.Font.GothamBold;v242.TextStrokeTransparency=1235.5 -(1030 + 205) ;v242.TextSize=927 -(910 + 3) ;v240=7 -4 ;end end end end local function v32(v113) local v114=v113.Character and v113.Character:FindFirstChild(v7("\243\212\47\88","\55\187\177\78\60\79")) ;if v114 then local v244=1684 -(1466 + 218) ;local v245;while true do if (v244==(0 + 0)) then v245=v114:FindFirstChild(v7("\8\253\111","\224\77\174\63\139\38\175"));if v245 then v245:Destroy();end break;end end end end local function v33() for v192,v193 in ipairs(game.Players:GetPlayers()) do if (v193~=v29) then if v28 then v31(v193);else v32(v193);end end end end v27:AddToggle({[v7("\170\64\85\43","\78\228\33\56")]=v7("\235\77\130\67\181\226\95\139\38\183","\229\174\30\210\99"),[v7("\63\232\128\80\248\49\45","\89\123\141\230\49\141\93")]=false,[v7("\208\112\250\0\18\75\240\122","\42\147\17\150\108\112")]=function(v115) local v116=1148 -(556 + 592) ;while true do if (v116==(0 + 0)) then on=v115;v28=v115;v116=809 -(329 + 479) ;end if (v116==(855 -(174 + 680))) then v33();break;end end end});game.Players.PlayerRemoving:Connect(function(v117) v32(v117);end);game.Players.PlayerAdded:Connect(function(v118) if v28 then v31(v118);end end);local function v34() while true do local v194=0 -0 ;local v195;while true do if (v194==(0 -0)) then v195=(0 + 0) -(739 -(396 + 343)) ;while true do if (v195==(0 + 0)) then if v28 then v33();end wait((1478 -(29 + 1448)) + (1389 -(135 + 1254)) );break;end end break;end end end end spawn(v34);if v28 then v33();end for v119,v120 in pairs(v30) do if (v120 and v120.Parent) then v120:Destroy();end end v30={};local v35=false;v27:AddToggle({[v7("\33\167\32\122","\136\111\198\77\31\135")]=v7("\44\38\132\122\148\212","\201\98\105\199\54\221\132\119"),[v7("\157\9\133\32\23\57\184","\204\217\108\227\65\98\85")]=false,[v7("\125\194\249\233\46\193\93\200","\160\62\163\149\133\76")]=function(v121) local v122=0 -0 ;local v123;local v124;while true do if (v122==((4 -3) + 0 + 0)) then v124=v123.Character;if v124 then local v299=0;local v300;local v301;while true do if (v299==(1527 -(389 + 1138))) then v300=(643 -(102 + 472)) -(10 + 0 + 59) ;v301=nil;v299=1;end if (v299==(1 + 0)) then while true do if (v300==(1 + 0 + 0)) then if v301 then v301.MaxHealth=(v35 and math.huge) or (492 -(1937 -(320 + 1225))) ;v301.Health=(v35 and math.huge) or (1263 -((1194 -523) + 302 + 190)) ;end break;end if (v300==((1464 -(157 + 1307)) + 0)) then for v517,v518 in pairs(v124:GetChildren()) do if v518:IsA(v7("\244\161\30\42\243\215\178\25","\163\182\192\109\79")) then v518.CanCollide= not v35;end end v301=v124:FindFirstChildOfClass(v7("\28\51\13\193\251\59\47\4","\149\84\70\96\160"));v300=1860 -(821 + 1038) ;end end break;end end end break;end if (v122==(1215 -((920 -551) + 93 + 753))) then local v265=0 -0 ;while true do if (v265==(0 + 0)) then v35=v121;v123=game.Players.LocalPlayer;v265=2 -1 ;end if (1==v265) then v122=(1027 -(834 + 192)) + 0 + 0 ;break;end end end end end});game:GetService(v7("\10\19\3\222\61\20\27\228\59\3","\141\88\102\109")).Stepped:Connect(function() if v35 then local v246=0;local v247;local v248;local v249;local v250;while true do if ((1 + 1)==v246) then while true do if (v247==(0 + 0)) then local v391=0 -0 ;while true do if (v391==(305 -(300 + 4))) then v247=1 + 0 ;break;end if (v391==(0 -0)) then v248=0;v249=nil;v391=363 -(112 + 250) ;end end end if (v247==((776 + 1170) -(1036 + (2276 -1367)))) then v250=nil;while true do if ((0 + 0 + 0 + 0)==v248) then local v503=0 -(0 + 0) ;while true do if (v503==((102 + 102) -(11 + 143 + 49))) then v248=(1415 -(1001 + 413)) + 0 ;break;end if (v503==((390 -215) -((1017 -(244 + 638)) + (733 -(627 + 66))))) then v249=game.Players.LocalPlayer;v250=v249.Character;v503=2 -1 ;end end end if (v248==((2 -1) + (602 -(512 + 90)))) then if v250 then for v547,v548 in pairs(v250:GetChildren()) do if v548:IsA(v7("\145\82\217\117\42\60\71\213","\161\211\51\170\16\122\93\53")) then v548.CanCollide=false;end end end break;end end break;end end break;end if ((1906 -(1665 + 241))==v246) then v247=(717 -(373 + 344)) + 0 ;v248=nil;v246=1 + 0 ;end if (v246==(1 + 0)) then local v302=0;while true do if (v302==(2 -1)) then v246=2 -0 ;break;end if (v302==0) then v249=nil;v250=nil;v302=1100 -(35 + 1064) ;end end end end end end);local v36=false;v27:AddToggle({[v7("\213\175\191\45","\72\155\206\210")]=v7("\108\79\121\62","\83\38\26\52\110"),[v7("\124\18\33\71\77\27\51","\38\56\119\71")]=false,[v7("\208\238\84\218\39\87\240\228","\54\147\143\56\182\69")]=function(v125) local v126=0;local v127;while true do if (v126==(0 + 0)) then v127=0 -0 ;while true do if (v127==((1 + 1) -1)) then while _G.infinitojump do local v347=1236 -(298 + 938) ;local v348;while true do if (v347==0) then v348=0 -(1259 -(233 + 1026)) ;while true do if (v348==(1666 -(636 + 1030))) then game:GetService(v7("\227\146\250\91\246\216\145\234\93\236\211\147\233\64\220\211","\191\182\225\159\41")).JumpRequest:Connect(function() if v36 then game:GetService(v7("\27\30\41\76\142\149\209","\162\75\114\72\53\235\231")).LocalPlayer.Character:FindFirstChildOfClass(v7("\164\41\73\227\93\13\133\56","\98\236\92\36\130\51")):ChangeState(v7("\142\12\1\170\76\166\178","\80\196\121\108\218\37\200\213"));end end);wait();break;end end break;end end end break;end if (v127==(0 + 0)) then _G.infinitojump=v125;v36=v125;v127=(173 + 4) -(50 + 38 + 88) ;end end break;end end end});local v37=game:GetService(v7("\48\127\3\102\78\28\153","\234\96\19\98\31\43\110"));local v29=v37.LocalPlayer;local v38=v29.Character or v29.CharacterAdded:Wait() ;local v39=v38:WaitForChild(v7("\46\10\95\198\162\125\130\2","\235\102\127\50\167\204\18"));local v40=false;local v41=v7("\1\247","\78\48\193\149\67\36");local function v19(v128) if v39 then v39.WalkSpeed=tonumber(v128);end end local function v42(v129) local v130=(0 + 0) -(221 -(55 + 166)) ;local v131;while true do if (v130==(0 + 0 + 0)) then v131=0 + 0 ;while true do if (v131==((5396 -3983) -((1530 -(36 + 261)) + 180))) then v40=v129;if v129 then v19(v41);else v19(v7("\97\72","\33\80\126\224\120"));end break;end end break;end end end local function v43() if v40 then v19(v7("\189\254","\60\140\200\99\164"));end end local function v44(v132) local v133=0 -0 ;local v134;while true do if (v133==0) then v134=0;while true do if (v134==(1368 -(34 + 1334))) then v38=v132;v39=v38:WaitForChild(v7("\175\225\9\39\172\136\253\0","\194\231\148\100\70"));v134=1;end if (v134==1) then if v40 then v19(v41);end v39.Died:Connect(v43);break;end end break;end end end local function v45() if v40 then v19(v41);end end local v46=v27:AddToggle({[v7("\104\77\204\166","\168\38\44\161\195\150")]=v7("\179\204\167\83\20","\118\224\156\226\22\80\136\214"),[v7("\102\235\95\129\87\226\77","\224\34\142\57")]=false,[v7("\253\166\201\209\113\240\94\5","\110\190\199\165\189\19\145\61")]=v42});local v47=v27:AddDropdown({[v7("\244\234\122\237","\167\186\139\23\136\235")]=v7("\41\144\164\40\57\129\200\62\42\144\173\41","\109\122\213\232"),[v7("\202\242\164\49\251\251\182","\80\142\151\194")]=v7("\82\144","\44\99\166\23"),[v7("\83\231\61\63\60\170\111","\196\28\151\73\86\83")]={"0","5",v7("\162\83","\22\147\99\73\112\226\56\120"),v7("\233\35","\237\216\21\130\149"),v7("\208\28","\62\226\46\63\63\208\169"),v7("\182\73","\62\133\121\53\227\127\109\79"),v7("\67\65","\194\112\116\82\149\182\206"),v7("\109\248","\110\89\200\44\120\160\130"),v7("\254\147","\45\203\163\43\38\35\42\91"),v7("\135\208","\52\178\229\188\67\231\201"),v7("\119\20","\67\65\33\48\100\151\60"),v7("\136\183","\147\191\135\206\184"),v7("\220\120","\210\228\72\198\161\184\51"),v7("\111\25","\174\86\41\147\112\19"),v7("\2\85","\203\59\96\237\107\69\111\113"),v7("\117\70\252","\183\68\118\204\129\81\144"),v7("\95\255\37","\226\110\205\16\132\107"),v7("\186\150\176","\33\139\163\128\185"),v7("\5\8\84","\190\55\56\100"),v7("\4\250\108","\147\54\207\92\126\115\131"),v7("\94\97\101","\30\109\81\85\29\109"),v7("\172\35\1","\156\159\17\52\214\86\190"),v7("\253\186\237","\220\206\143\221"),v7("\213\42\120","\178\230\29\77\119\184\172"),v7("\166\231\90","\152\149\222\106\123\23"),v7("\137\118\166","\213\189\70\150\35")},[v7("\108\84\120\4\77\84\119\3","\104\47\53\20")]=function(v135) local v136=0 + 0 ;while true do if (v136==0) then v41=v135;if v40 then v19(v135);end break;end end end});v29.CharacterAdded:Connect(v44);if v38 then v39.Died:Connect(v43);end local function v48() v45();end game:GetService(v7("\145\89\143\47\185\29\181\69\130\25","\111\195\44\225\124\220")).Heartbeat:Connect(v48);local function v49() if v40 then v19(v41);end end local function v50() if v40 then v19(v41);end end v39.Jumping:Connect(v49);local v35=false;local v51=v13:MakeTab({[v7("\246\71\13\118","\203\184\38\96\19\203")]=v7("\121\94\76\109\250\16\67\85\96\247\28\65","\174\89\19\25\33"),[v7("\6\17\93\64","\107\79\114\50\46\151\231")]=v7("\43\164\173\40\153\42\178\212\48\162\239\102\197\97\226\152\107\240\236\112\222\106\224\145\96\254\228","\160\89\198\213\73\234\89\215"),[v7("\120\99\177\243\204\93\124\155\240\201\81","\165\40\17\212\158")]=false});local v52={};local v53;local v54="";local v55=false;local v56=game.Players.LocalPlayer;local function v57() local v137=0;local v138;while true do if (v137==(0 -0)) then v138=0 -0 ;while true do if ((2 -1)==v138) then if  not table.find(v52,v54) then v54=v52[(45 -27) -(5 + 7 + 5) ] or "" ;end if v53 then v53:Refresh(v52,true);end break;end if (v138==(0 -0)) then v52={};for v349,v350 in pairs(game:GetService(v7("\213\213\9\42\35\247\202","\70\133\185\104\83")):GetPlayers()) do if (v350.Name~=v56.Name) then table.insert(v52,v350.Name);end end v138=3 -2 ;end end break;end end end v53=v51:AddDropdown({[v7("\42\68\73\47","\169\100\37\36\74")]=v7("\51\162\142\117\35\179\226\96\44\166\155\117\50","\48\96\231\194"),[v7("\236\95\8\44\12\212\187","\227\168\58\110\77\121\184\207")]="1",[v7("\84\44\171\73\190\213\98","\197\27\92\223\32\209\187\17")]=v52,[v7("\32\94\207\247\1\94\192\240","\155\99\63\163")]=function(v139) v54=v139;end});v57();v51:AddToggle({[v7("\172\208\172\136","\228\226\177\193\237\217")]=v7("\7\128\6\197\0\145\23\195","\134\84\208\67"),[v7("\55\169\128\93\6\160\146","\60\115\204\230")]=false,[v7("\196\59\231\124\229\59\232\123","\16\135\90\139")]=function(v140) v55=v140;if v55 then while v55 do local v266=0 + 0 ;local v267;while true do if (v266==(0 -0)) then v267=0 + 0 ;while true do if (v267==((688 -(364 + 324)) -(0 -0))) then wait();if (v54 and game.Players[v54] and game.Players[v54].Character) then local v504=0 -0 ;local v505;local v506;local v507;while true do if (v504==(0 + 0)) then v505=(0 -0) + 0 ;v506=nil;v504=1;end if (v504==(1 -0)) then v507=nil;while true do if (v505==1) then if v507 then local v564=game.Workspace.CurrentCamera;v564.CameraSubject=v507;v564.CFrame=CFrame.new(v564.CFrame.Position,v507.Position);end break;end if (v505==(0 -0)) then v506=game.Players[v54].Character;v507=v506:FindFirstChild(v7("\124\97\11\50\64\91\113\80\70\9\60\90\100\121\70\96","\24\52\20\102\83\46\52"));v505=(2362 -(1249 + 19)) -(277 + 737 + 79) ;end end break;end end end break;end end break;end end end else local v252=0 -0 ;local v253;local v254;while true do if (v252==((1090 -(686 + 400)) -(3 + 0))) then if (v254 and v254:FindFirstChild(v7("\236\58\44\37\1\203\38\37\22\0\203\59\17\37\29\208","\111\164\79\65\68"))) then local v351=(1412 -(73 + 156)) -(6 + 1052 + (936 -(721 + 90))) ;local v352;while true do if (v351==(0 + 0 + (0 -0))) then v352=470 -(224 + 246) ;while true do if (v352==(975 -((1320 -505) + (294 -134)))) then wait(0.1 + 0 );v253.CameraSubject=v254.HumanoidRootPart;v352=(1 + 3) -3 ;end if (v352==((2 + 0) -(1 -0))) then v253.CFrame=CFrame.new(v254.HumanoidRootPart.Position + Vector3.new(0 + (0 -0) ,(527 -(203 + 310)) -(2002 -(1238 + 755)) , -((134 + 1774) -((1575 -(709 + 825)) + (3421 -1564)))) ,v254.HumanoidRootPart.Position);break;end end break;end end end break;end if (v252==(0 -0)) then v253=game.Workspace.CurrentCamera;v254=v56.Character;v252=865 -(196 + 668) ;end end end end});game.Players.PlayerAdded:Connect(v57);game.Players.PlayerRemoving:Connect(v57);local v58=v13:MakeTab({[v7("\232\216\142\219","\138\166\185\227\190\78")]=v7("\255\81\233\18\98\12\43\255","\121\171\20\165\87\50\67"),[v7("\239\59\182\56","\98\166\88\217\86\217")]=v7("\228\244\97\0\149\207\243\226\112\5\220\147\185\167\33\86\214\142\164\164\41\85\208\138","\188\150\150\25\97\230"),[v7("\234\155\90\15\5\248\215\166\81\14\21","\141\186\233\63\98\108")]=false});local function v59() local v141=0;local v142;local v143;local v144;while true do if (v141==(3 -2)) then v144=nil;while true do if (v142==(0 -0)) then v143=(2726 -(171 + 662)) -(1222 + (764 -(4 + 89))) ;v144=nil;v142=3 -2 ;end if (v142==1) then while true do if (v143==((0 + 0) -(0 -0))) then v144=game.Players.LocalPlayer;if (v144.Character and v144.Character:FindFirstChild(v7("\217\255\33\183\43\254\227\40\132\42\254\254\28\183\55\229","\69\145\138\76\214"))) then v144.Character.HumanoidRootPart.CFrame=CFrame.new(244.87147521972656,23.601322174072266 + 34 , -(7.117152690887451 -(1487 -(35 + 1451))));end break;end end break;end end break;end if (v141==(1453 -(28 + 1425))) then v142=1993 -(941 + 1052) ;v143=nil;v141=1 + 0 ;end end end v58:AddButton({[v7("\94\206\132\140","\118\16\175\233\233\223")]=v7("\167\171\23\153\215","\29\235\228\85\219\142\235"),[v7("\30\213\182\209\117\79\36\89","\50\93\180\218\189\23\46\71")]=function() v59();end});v58:AddLabel(v7("\158\228\27\12\4\156\8\158\228\27\12\4\156\8\158\228\27\12\4\156\8\158\228\27\12\4\156\8\158\228\27\12\4\156\8\158\228\27\12\4\156\8\238\136\122\117\97\238\8\234\129\119\105\116\243\122\234","\40\190\196\59\44\36\188"));local v60;local v52={};local v53;local function v57() local v145=0;local v146;while true do if (v145==(1514 -(822 + 692))) then v146=0 -0 ;while true do if (v146==(0 + 0)) then local v323=0;while true do if (v323==(298 -(45 + 252))) then v146=(1171 + 12) -(79 + 150 + (2319 -1366)) ;break;end if (v323==0) then v52={};for v423,v424 in pairs(game:GetService(v7("\12\73\221\173\255\111\30","\109\92\37\188\212\154\29")):GetPlayers()) do if (v424.Name~=game.Players.LocalPlayer.Name) then table.insert(v52,v424.Name);end end v323=434 -(114 + 319) ;end end end if (v146==(1775 -((1594 -483) + 663))) then v60=v52[1580 -((1119 -245) + 450 + 255) ] or "" ;if v53 then v53:Refresh(v52,true);end break;end end break;end end end v53=v58:AddDropdown({[v7("\42\238\169\198","\58\100\143\196\163\81")]=v7("\41\103\15\134\28\125\165\62\54\99\26\134\13","\110\122\34\67\195\95\41\133"),[v7("\81\180\93\75\195\121\165","\182\21\209\59\42")]="1",[v7("\152\71\209\20\46\176\164","\222\215\55\165\125\65")]=v52,[v7("\15\208\202\22\240\192\238\65","\42\76\177\166\122\146\161\141")]=function(v147) v60=v147;end});v57();v58:AddButton({[v7("\139\139\8\203","\22\197\234\101\174\25")]=v7("\14\24\140\255\93\239\227\163\1\17\149\243\68\155","\230\77\84\197\188\22\207\183"),[v7("\218\21\202\240\142\160\243\62","\85\153\116\166\156\236\193\144")]=function() if (v60 and game.Players[v60] and game.Players[v60].Character and game.Players[v60].Character:FindFirstChild(v7("\140\245\64\178\234\15\173\228\127\188\235\20\148\225\95\167","\96\196\128\45\211\132"))) then game.Players.LocalPlayer.Character:MoveTo(game.Players[v60].Character.HumanoidRootPart.Position);end end});local v61=false;v58:AddToggle({[v7("\27\140\118\90","\184\85\237\27\63\178\207\212")]=v7("\60\124\37\122\56\118\59\107","\63\104\57\105"),[v7("\47\130\162\69\30\139\176","\36\107\231\196")]=false,[v7("\126\180\174\139\95\180\161\140","\231\61\213\194")]=function(v148) local v149=(0 -0) + (0 -0) ;while true do if (v149==((1963 -(556 + 1407)) + 0)) then v61=v148;while v61 do local v270=1206 -(741 + 465) ;while true do if (v270==((465 -(170 + 295)) -(0 + 0))) then wait();if (v60 and game.Players[v60] and game.Players[v60].Character and game.Players[v60].Character:FindFirstChild(v7("\33\184\48\114\7\162\52\119\59\162\50\103\57\172\47\103","\19\105\205\93"))) then game.Players.LocalPlayer.Character:MoveTo(game.Players[v60].Character.HumanoidRootPart.Position);end break;end end end break;end end end});game.Players.PlayerAdded:Connect(v57);game.Players.PlayerRemoving:Connect(v57);local v62=v13:MakeTab({[v7("\135\9\211\132","\95\201\104\190\225")]=v7("\140\228\239\232\134\236","\174\207\171\161"),[v7("\196\253\2\253","\183\141\158\109\147\152")]=v7("\62\11\254\13\63\26\227\24\37\13\188\67\99\88\190\91\124\91\177\91\123\92\183\84","\108\76\105\134"),[v7("\219\215\180\236\199\254\200\158\239\194\242","\174\139\165\209\129")]=false});v62:AddLabel(v7("\227\243\162\129\134\67\48\56\227\243\162\129\134\67\48\56\227\243\162\129\134\67\48\56\227\243\162\129\134\67\48\56\227\243\162\129\134\67\48\56\227\243\162\129\134\67\48\56\227\243\162\229\239\48\81\90\143\150","\24\195\211\130\161\166\99\16"));local v63;local v64=false;local function v65(v150,v151) local v152=0;local v153;local v154;local v155;while true do if ((1 + 0)==v152) then v155=nil;while true do if (v153==1) then while true do if (v154==(0 -0)) then v155=v150:FindFirstChild(v151);if v155 then pcall(function() v155:Destroy();end);end break;end end break;end if (v153==0) then v154=0 + 0 + 0 ;v155=nil;v153=1;end end break;end if ((0 + 0)==v152) then v153=0 + 0 ;v154=nil;v152=1231 -(957 + 273) ;end end end local function v66() local v156=workspace:FindFirstChild(v7("\107\2\249","\118\38\99\137\76\51"));if v156 then local v255=v156:FindFirstChild(v7("\222\42\4\1\26\41\254","\64\157\70\101\114\105"));if v255 then v65(v255,v7("\119\169\179\230\2","\112\32\200\199\131"));end end end local function v67() local v157=0;local v158;local v159;local v160;while true do if (v157==(0 + 0)) then local v268=0 + 0 ;while true do if (v268==1) then v157=1;break;end if (v268==0) then v158=(2587 -1908) -(642 + 37) ;v159=nil;v268=2 -1 ;end end end if (v157==1) then v160=nil;while true do if (2==v158) then v63=v160.ChildAdded:Connect(function(v353) if (v353.Name==v7("\205\77\246\249\101","\23\154\44\130\156")) then v65(v160,v7("\38\167\185\171\36","\115\113\198\205\206\86"));end end);break;end if (v158==(1 + (0 -0))) then local v324=0;local v325;while true do if (v324==(0 -0)) then v325=1780 -(389 + 1391) ;while true do if (v325==1) then v158=1 + 0 + 1 ;break;end if (v325==(0 + 0)) then v65(v160,v7("\154\43\71\73\164","\214\205\74\51\44"));if v63 then v63:Disconnect();end v325=1;end end break;end end end if (v158==(0 -(0 -0))) then local v326=0;local v327;while true do if ((951 -(783 + 168))==v326) then v327=0 -0 ;while true do if (0==v327) then v159=workspace:WaitForChild(v7("\1\81\76","\66\76\48\60\216\163\203"));v160=v159:WaitForChild(v7("\153\138\120\224\76\199\39","\68\218\230\25\147\63\174"));v327=1 + 0 ;end if (v327==1) then v158=455 -((544 -(309 + 2)) + (678 -457)) ;break;end end break;end end end end break;end end end local function v68() while v64 do local v196=1212 -(1090 + 122) ;local v197;local v198;while true do if (v196==1) then while true do if (v197==(0 + 0 + (0 -0))) then v198=0 + 0 ;while true do if (v198==((2659 -(628 + 490)) -(129 + 589 + (2037 -1214)))) then wait((4 -3) + (774 -(431 + 343)) );v66();break;end end break;end end break;end if (v196==(0 -0)) then v197=(0 -0) -(0 + 0) ;v198=nil;v196=1 + 0 ;end end end end v62:AddButton({[v7("\170\86\243\95","\58\228\55\158")]=v7("\131\168\228\11\14","\85\212\233\176\78\92\205"),[v7("\105\89\132\238\72\89\139\233","\130\42\56\232")]=function() local v161=0;local v162;while true do if (v161==0) then v162=1695 -(556 + 1139) ;while true do if (v162==(15 -(6 + 9))) then if  not v64 then local v392=(148 + 657) -(137 + 129 + (708 -(28 + 141))) ;while true do if (v392==(0 + 0)) then v64=true;v67();v392=2 -1 ;end if (v392==(1 -0)) then coroutine.wrap(v68)();break;end end end v66();break;end end break;end end end});v62:AddLabel(v7("\170\245\100\163\0\127\170\245\100\163\0\127\170\245\100\163\0\127\170\245\100\163\0\127\170\245\100\163\0\127\170\245\100\163\0\127\170\245\100\163\0\127\170\245\100\163\0\127\170\245\7\204\100\26\217","\95\138\213\68\131\32"));local v69={v7("\120\120\241\104\90\3\3\132\112","\22\74\72\193\35"),v7("\126\44\180\115\0\80\207\125\31","\56\76\25\132")};local function v70() for v199,v200 in ipairs(v69) do local v201={[2 -(1 + 0) ]=v7("\108\196\175\35\202\83","\175\62\161\203\70"),[3 -1 ]=v200};game:GetService(v7("\14\216\211\31\60\63\220\215\22\49\15\201\204\1\52\59\216","\85\92\189\163\115")).ReplicationManagers.CodesRF:InvokeServer(unpack(v201));end end v62:AddButton({[v7("\7\173\61\61","\88\73\204\80")]=v7("\28\166\52\99\12\247","\186\78\227\112\38\73"),[v7("\223\86\241\89\81\123\255\92","\26\156\55\157\53\51")]=v70});v62:AddLabel(v7("\204\152\86\153\248\16\204\152\86\153\248\16\204\152\86\153\248\16\204\152\86\153\248\16\204\152\86\153\248\16\204\152\86\153\248\16\204\152\86\153\248\16\204\152\86\153\248\16\204\152\37\252\138\102\169\234","\48\236\184\118\185\216"));local function v71() local v163=0;local v164;local v165;local v166;while true do if (v163==(1318 -(486 + 831))) then v166=nil;while true do if (v164==((2 -1) + (0 -0))) then local v328=0 + 0 ;while true do if (v328==(3 -2)) then v164=1017 -((1920 -(668 + 595)) + 358) ;break;end if (v328==0) then v165=game:GetService(v7("\137\226\40\163\215\83\175\243\23\163\213\74\180\228\33","\60\221\135\68\198\167"));v166=game.Players.LocalPlayer;v328=1 + 0 ;end end end if (v164==((0 + 0) -(0 -0))) then local v329=290 -(23 + 267) ;while true do if ((1945 -(1129 + 815))==v329) then v164=(389 -(371 + 16)) -(1751 -(1326 + 424)) ;break;end if (v329==0) then game:GetService(v7("\213\177\86\41\202\38\246","\84\133\221\55\80\175")).LocalPlayer:Kick("Ã£â‚¬Å SyniX HUBÃ£â‚¬â€¹ Rejoining the game...");wait(0.1 -0 );v329=3 -2 ;end end end if (v164==((1307 -(88 + 30)) -((1922 -(720 + 51)) + 36))) then v165:Teleport(game.PlaceId,v166);break;end end break;end if (v163==(0 -0)) then v164=(1776 -(421 + 1355)) + 0 ;v165=nil;v163=1;end end end v62:AddButton({[v7("\192\188\245\134","\185\142\221\152\227\34")]=v7("\106\224\125\213\106\29","\151\56\165\55\154\35\83"),[v7("\131\66\9\226\162\66\6\229","\142\192\35\101")]=function() v71();end});v62:AddButton({[v7("\248\116\36\166","\118\182\21\73\195\135\236\204")]=v7("\46\25\45\0\52\33\220\49\25\40\115","\157\104\92\122\32\100\109"),[v7("\128\167\195\198\63\38\142\160","\203\195\198\175\170\93\71\237")]=function() local v167={};local v168="";local v169=os.date(v7("\111\1\42","\156\78\43\94\181\49\113")).hour;local v170=game:GetService(v7("\70\237\200\166\27\76\107\102\219\193\177\29\74\122\119","\25\18\136\164\195\107\35"));local v171=game:GetService(v7("\192\57\189\95\65\185\211\174\225\46\172","\216\136\77\201\47\18\220\161"));local v172=game.PlaceId;local v173=pcall(function() v167=v171:JSONDecode(readfile(v7("\62\233\57\204\13\206\207\37\227\59\151\28\217\143\61\162\33\201\7\210","\226\77\140\75\186\104\188")));end);if  not v173 then local v256=0;local v257;while true do if (v256==(0 -0)) then v257=0 + 0 ;while true do if (v257==(0 + (1083 -(286 + 797)))) then table.insert(v167,v169);pcall(function() writefile(v7("\170\203\194\41\74\171\131\216\48\95\244\218\213\50\95\247\196\195\48\65","\47\217\174\176\95"),v171:JSONEncode(v167));end);break;end end break;end end end local function v174() local v202=0 -0 ;local v203;local v204;local v205;local v206;local v207;local v208;local v209;local v210;local v211;local v212;local v213;local v214;local v215;local v216;local v217;local v218;local v219;local v220;while true do if (v202==(9 -3)) then while true do if (v203==((468 -(397 + 42)) -19)) then local v354=0 + 0 ;while true do if (3==v354) then v217.TextSize=11 -(806 -(24 + 776)) ;v217.TextWrapped=true;v354=4;end if (1==v354) then v217.LineHeight=0.85 -0 ;v217.Text=v7("\63\247\252\154\114\4\251\243\143\49\10\253\239\200\66\9\224\235\141\99\66\188\179","\17\108\146\157\232");v354=2;end if (v354==(785 -(222 + 563))) then v217.Size=UDim2.new(0.762829661 -0 ,(1319 + 513) -((1742 -(23 + 167)) + 280) ,(2633.50985551 -(690 + 1108)) -(24 + 40 + 770) ,0 + 0 );v217.Font=Enum.Font.GothamBold;v354=1;end if (v354==2) then v217.TextColor3=Color3.fromRGB((1022 -(40 + 808)) + 81 ,42 + 213 ,255);v217.TextScaled=true;v354=3;end if ((15 -11)==v354) then v218.Parent=v217;v203=11 + 0 ;break;end end end if ((5 + 3)==v203) then local v355=0 + 0 ;while true do if (v355==4) then v215.Size=UDim2.new((571.701685667 -(47 + 524)) + 0 ,0 + 0 ,(3326.582388222 -2109) -(841 + (561 -185)) ,0);v203=(24 -13) -2 ;break;end if (v355==(1728 -(1165 + 561))) then v215.BackgroundTransparency=4 -(1 + 2) ;v215.BorderColor3=Color3.fromRGB((0 -0) -0 ,0 + 0 ,0 -0 );v355=482 -(341 + 138) ;end if ((1 + 2)==v355) then v215.BorderSizePixel=(1689 -870) -((925 -(89 + 237)) + (707 -487)) ;v215.Position=UDim2.new(0 -0 ,(4065 -2134) -((2694 -(581 + 300)) + (1338 -(855 + 365))) ,0.415175945 -0 ,0 + 0 );v355=4;end if (v355==(1236 -(1030 + 205))) then v215.Parent=v205;v215.BackgroundColor3=Color3.fromRGB(1498 -(148 + 9 + 1011 + 75) ,(796 -(156 + 130)) -(579 -324) ,429 -174 );v355=3 -1 ;end if (v355==0) then v214.AspectRatio=9.650000000000006 + 24 + 151 ;v215.Name=v7("\10\181\30\28\25\250\27\177","\136\126\208\102\104\120");v355=1;end end end if (v203==(1 + 0 + (71 -(10 + 59)))) then local v356=0;while true do if (v356==(1 + 1)) then v208.BackgroundColor3=Color3.fromRGB((5052 -4026) -((1627 -(671 + 492)) + 315 + 80) ,(1643 -(369 + 846)) -(70 + 191) ,70 + 11 + 86 );v208.BackgroundTransparency=(2783 -(1036 + 909)) -(372 + 95 + (621 -251)) ;v356=3;end if (v356==(206 -(11 + 192))) then v208.BorderColor3=Color3.fromRGB((0 + 0) -(175 -(135 + 40)) ,(0 -0) + 0 + 0 ,(0 -0) -(0 -0) );v208.BorderSizePixel=(176 -(50 + 126)) + 0 ;v356=4;end if (v356==(2 -1)) then v208.Name=v7("\137\249\147","\93\237\144\229\143");v208.Parent=v205;v356=1 + 1 ;end if (v356==(1413 -(1233 + 180))) then v207.Parent=v205;v207.AspectRatio=(977.56 -(522 + 447)) -5 ;v356=1;end if (v356==(1425 -(107 + 1314))) then v208.Position=UDim2.new( -((0.00190504093 + 0) -(0 -0)),520 -(150 + 370) ,0.401610732 + 0 ,(2545 -1263) -(74 + 1208) );v203=(35 -26) -(1915 -(716 + 1194)) ;break;end end end if (v203==((1 + 22) -(2 + 16))) then v210.Name=v7("\30\162\224\51\53\143\235\34\57","\90\77\219\142");v210.Parent=v208;v210.BackgroundColor3=Color3.fromRGB(255,(685 -(74 + 429)) + 73 ,(1244 -599) -(7 + 7 + 376) );v210.BackgroundTransparency=2 -1 ;v210.BorderColor3=Color3.fromRGB((0 + 0) -(0 -0) ,(0 -0) + (433 -(279 + 154)) ,(778 -(454 + 324)) + 0 );v210.BorderSizePixel=0 + 0 ;v210.Position=UDim2.new(0.174563825 + (17 -(12 + 5)) ,0, -((40.258762399999995 + 33) -(122 -74)),0 + 0 );v210.Size=UDim2.new((1093.695285857 -(277 + 816)) + (0 -0) ,1183 -(1058 + 125) ,4.9284687 + 15 ,975 -(815 + 160) );v210.Font=Enum.Font.GothamBlack;v203=25 -19 ;end if (v203==((199 -115) -(23 + 14 + 41))) then local v367=0 -0 ;while true do if (v367==3) then v211.Parent=v210;v211.AspectRatio=(1911.583 -(41 + 1857)) -(1901 -(1222 + 671)) ;v367=10 -6 ;end if ((2 -0)==v367) then v210.TextStrokeColor3=Color3.fromRGB((1577 -(229 + 953)) -(1914 -(1111 + 663)) ,(1660 -(874 + 705)) + 25 + 149 ,1156 -(445 + 207 + (517 -268)) );v210.TextWrapped=true;v367=3;end if (v367==0) then v210.Text=v7("\213\29\47\48\116\71\55\166\42\46\45\69\1\115\229","\26\134\100\65\89\44\103");v210.TextColor3=Color3.fromRGB((17 + 587) -(1028 -(642 + 37)) ,39 + 132 + 14 + 70 ,640 -385 );v367=455 -(233 + 221) ;end if (v367==(8 -4)) then v212.Parent=v208;v203=7;break;end if (v367==1) then v210.TextScaled=true;v210.TextSize=9 + 1 + 1 ;v367=1543 -(718 + 823) ;end end end if (v203==(1877 -(446 + 262 + (1965 -(266 + 539))))) then local v368=0;while true do if (v368==(2 -1)) then v217.Name=v7("\108\143\214\87\174\92\50\69","\49\24\234\174\35\207\50\93");v217.Parent=v215;v368=1227 -(636 + 589) ;end if (v368==(4 -2)) then v217.BackgroundColor3=Color3.fromRGB((956 -492) -(166 + 43) ,(103 + 179) -((1025 -(657 + 358)) + (44 -27)) ,(132 -74) + (1384 -(1151 + 36)) );v217.BackgroundTransparency=1733 -(1352 + 48 + 88 + 244) ;v368=8 -5 ;end if (v368==3) then v217.BorderColor3=Color3.fromRGB(1832 -(1552 + 280) ,(834 -(64 + 770)) -(0 + 0) ,0 -0 );v217.BorderSizePixel=(339 + 1569) -((1485 -(157 + 1086)) + (3334 -1668)) ;v368=17 -13 ;end if (v368==(0 -0)) then v216.Parent=v215;v216.AspectRatio=(13.289 -3) -(825 -(599 + 220)) ;v368=1;end if (v368==(7 -3)) then v217.Position=UDim2.new((1931.0892357156 -(1813 + 118)) + 0 ,0 + 0 + (1217 -(841 + 376)) ,(0.159190118 -0) + 0 + 0 ,0);v203=(2593 -1643) -((1709 -(464 + 395)) + 90) ;break;end end end if (v203==(3 -(2 -1))) then local v369=0;local v370;while true do if (0==v369) then v370=0;while true do if ((1 + 0)==v370) then v205.BackgroundColor3=Color3.fromRGB(837 -(467 + 370) ,(2872 -1482) -(360 + 757 + 273) ,(0 -0) + 0 + 0 );v205.BackgroundTransparency=(0.4 -0) -(520 -(150 + 370)) ;v370=2;end if (v370==2) then v205.BorderColor3=Color3.fromRGB((1282 -(74 + 1208)) -(0 -0) ,0,(7877 -6216) -(647 + 262 + 752) );v205.BorderSizePixel=(1613 -(14 + 376)) -((188 -79) + 721 + 393) ;v370=3 + 0 ;end if ((0 + 0)==v370) then v205.Name=v7("\81\10\119\120\20\124\63","\90\51\107\20\19");v205.Parent=v204;v370=2 -1 ;end if (v370==3) then v205.Position=UDim2.new(0.776361048 + 0 ,(78 -(23 + 55)) -0 ,(0.709379315 -0) + 0 ,(162 + 80) -(6 + 212 + 24) );v205.Size=UDim2.new((0.384245038 -0) + 0 + 0 ,(901 -(652 + 249)) + 0 ,0.183602542 -0 ,(1868 -(708 + 1160)) -(0 -0) );v370=6 -2 ;end if (v370==(31 -(10 + 17))) then v206.Parent=v205;v203=3;break;end end break;end end end if (v203==1) then local v371=0 + 0 ;while true do if (v371==(1732 -(1400 + 332))) then v213=Instance.new(v7("\128\22\198\53\68\133\1\161\13\230\50\93\143\33\186\49\244\50\70\129\11\187\43","\98\213\95\135\70\52\224"));v214=Instance.new(v7("\203\138\232\100\68\251\160\221\69\85\234\170\198\84\91\240\176\221\101\85\247\173\221","\52\158\195\169\23"));v371=1;end if ((7 -3)==v371) then v204.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;v203=(1911 -(242 + 1666)) -1 ;break;end if (v371==(1 + 0)) then v215=Instance.new(v7("\92\174\51\121\131","\235\26\220\82\20\230\85\27"));v216=Instance.new(v7("\189\136\200\209\100\141\162\253\240\117\156\168\230\225\123\134\178\253\208\117\129\175\253","\20\232\193\137\162"));v371=2;end if (v371==2) then v217=Instance.new(v7("\22\218\221\178\203\141\21\116\46","\17\66\191\165\198\135\236\119"));v218=Instance.new(v7("\58\134\143\0\239\237\239\197\61\174\186\26\240\203\227\223\28\187\188\18\246\230\248","\177\111\207\206\115\159\136\140"));v371=2 + 1 ;end if (v371==3) then v204.Name=v7("\11\134\4\18\221\76","\63\101\233\112\116\180\47");v204.Parent=game.Players.LocalPlayer:WaitForChild(v7("\243\55\236\11\253\36\228\46\228","\86\163\91\141\114\152"));v371=4 + 0 ;end end end if (v203==((2080 -(850 + 90)) -((1883 -807) + (1447 -(360 + 1030))))) then local v372=0;while true do if (v372==(1 + 0)) then v212.BorderColor3=Color3.fromRGB((0 -0) + (0 -0) ,1661 -(909 + 752) ,0 + (1223 -(109 + 1114)) );v212.BorderSizePixel=407 -(174 + (426 -193)) ;v372=1 + 1 ;end if (v372==(244 -(6 + 236))) then v212.Position=UDim2.new((0.0560515448 + 0) -(0 + 0) ,0 -0 , -((27.2637463 -15) + (23 -9)),(2307 -(1076 + 57)) -(110 + 553 + (1200 -(579 + 110))) );v212.Size=UDim2.new(0.127630442 + 0 ,0 + 0 ,21.7752609,0 + 0 + 0 );v372=3;end if ((407 -(174 + 233))==v372) then v212.BackgroundColor3=Color3.fromRGB((117 -75) + 213 ,(1656 -712) -(258 + 321 + (1284 -(663 + 511))) ,228 + 27 );v212.BackgroundTransparency=1 + 0 + 0 ;v372=2 -1 ;end if (4==v372) then v214.Parent=v208;v203=2 + 6 ;break;end if (v372==(2 + 1)) then v212.Image=v7("\227\225\40\34\183\226\230\36\42\160\171\172\127\114\240\169\181\98\112\246\162\183\101\118","\196\145\131\80\67");v213.Parent=v212;v372=9 -5 ;end end end if (v203==(9 -5)) then local v373=0 + 0 ;while true do if (v373==(7 -3)) then v209.Size=UDim2.new(0.703590274,1556 -(467 + 188 + 83 + 818) ,(722.0135650374 -(478 + 244)) + (517 -(440 + 77)) ,0);v203=2 + 2 + 1 ;break;end if (v373==(3 -2)) then v209.Parent=v205;v209.BackgroundColor3=Color3.fromRGB(80 + (1643 -(655 + 901)) ,167,167);v373=2;end if ((1 + 1)==v373) then v209.BackgroundTransparency=(0.5 + 0) -(0 + 0) ;v209.BorderColor3=Color3.fromRGB(0 + 0 ,0 + 0 ,0);v373=11 -8 ;end if (v373==(1445 -(695 + 750))) then v208.Size=UDim2.new((0.703590274 -0) -0 ,(0 -0) + (0 -0) ,(351.0135650374 -(285 + 66)) -(0 -0) ,(1310 -(682 + 628)) -(0 + 0) );v209.Name=v7("\17\255\230\72","\38\117\150\144\121\107");v373=300 -(176 + 123) ;end if (v373==(2 + 1)) then v209.BorderSizePixel=0 + 0 ;v209.Position=UDim2.new( -((991.00190504093 -(239 + 30)) -(478 + 244)),517 -(440 + 77) ,0.401610732 + 0 + 0 ,(0 + 0) -(0 -0) );v373=12 -8 ;end end end if (((315 -(306 + 9)) + 0)==v203) then v204=Instance.new(v7("\139\222\100\7\183\90\95\51\177","\70\216\189\22\98\210\52\24"));v205=Instance.new(v7("\252\205\162\138\214","\179\186\191\195\231"));v206=Instance.new(v7("\204\22\59\235\235\49\29\246","\132\153\95\120"));v207=Instance.new(v7("\132\155\47\62\231\223\163\165\128\15\57\254\213\131\190\188\29\57\229\219\169\191\166","\192\209\210\110\77\151\186"));v208=Instance.new(v7("\198\17\35\228\250","\164\128\99\66\137\159"));v209=Instance.new(v7("\38\155\232\179\5","\222\96\233\137"));v210=Instance.new(v7("\141\182\191\11\164\242\242\188\191","\144\217\211\199\127\232\147"));v211=Instance.new(v7("\205\6\31\59\197\64\1\80\202\46\42\33\218\102\13\74\235\59\44\41\220\75\22","\36\152\79\94\72\181\37\98"));v212=Instance.new(v7("\254\213\70\56\210\244\70\61\210\212","\95\183\184\39"));v203=(10 -7) -(1 + 1) ;end if (v203==((894 + 562) -(335 + 360 + 750))) then v218.AspectRatio=(45.08 -29) -11 ;v218.DominantAxis=Enum.DominantAxis.Height;v219=(1382 -(1140 + 235)) -2 ;v220=tick() + v219 ;while tick()<v220  do local v393=0 + 0 ;local v394;local v395;local v396;while true do if (v393==(1 + 0)) then v396=nil;while true do if (v394==(1 + 0)) then v209.Size=UDim2.new(v396,(403 -(33 + 19)) -(103 + 182 + (197 -131)) ,0.0135650374 -(0 + 0) ,(2569 -1259) -(682 + 589 + 39) );wait(689.1 -(586 + 103) );break;end if (v394==(0 + 0 + 0)) then local v550=0 -0 ;while true do if (v550==(1489 -(1309 + 179))) then v394=1 -0 ;break;end if (v550==(0 + 0)) then v395=v220-tick() ;v396=v395/v219 ;v550=2 -1 ;end end end end break;end if (v393==(0 + 0)) then v394=(0 -0) -(0 -0) ;v395=nil;v393=1;end end end v209.Visible=false;v205:Destroy();break;end end break;end if ((614 -(295 + 314))==v202) then v218=nil;v219=nil;v220=nil;v202=6;end if (4==v202) then v215=nil;v216=nil;v217=nil;v202=12 -7 ;end if (v202==(1965 -(1300 + 662))) then v212=nil;v213=nil;v214=nil;v202=12 -8 ;end if (v202==1) then v206=nil;v207=nil;v208=nil;v202=2;end if (v202==(1757 -(1178 + 577))) then v209=nil;v210=nil;v211=nil;v202=3;end if (v202==(0 + 0)) then v203=(0 -0) + 0 ;v204=nil;v205=nil;v202=1406 -(851 + 554) ;end end end local function v175() local v221=0 + 0 ;local v222;local v223;while true do if (v221==(0 -0)) then v222=nil;if (v168=="") then v222=v171:JSONDecode(game:HttpGet(v7("\67\215\0\253\60\242\4\140\19\236\34\173\88\141\6\226\45\164\68\219\90\238\32\165\4\213\69\162\40\169\70\198\7\162","\200\43\163\116\141\79")   .. v172   .. v7("\240\37\56\145\166\241\241\172\121\13\150\178\248\234\188\105\46\140\162\224\204\173\50\56\145\237\213\240\188\112\49\138\189\253\247\226\103\109\211","\131\223\86\93\227\208\148") ));else v222=v171:JSONDecode(game:HttpGet(v7("\235\81\162\166\14\239\172\10\177\183\16\176\240\11\164\185\31\185\236\93\248\181\18\184\172\83\231\249\26\180\238\64\165\249","\213\131\37\214\214\125")   .. v172   .. v7("\105\56\32\173\247\35\57\54\240\209\51\41\41\182\226\121\56\42\173\245\9\57\33\186\243\123\10\54\188\167\42\34\40\182\245\123\122\117\239\167\37\62\55\172\238\52\118","\129\70\75\69\223")   .. v168 ));end v221=1 -0 ;end if (v221==1) then if v222.nextPageCursor then v168=v222.nextPageCursor;end v223=(601 -(115 + 187)) -(135 + 41 + 117 + 6) ;v221=7 -5 ;end if (v221==(1163 -(160 + 1001))) then for v305,v306 in pairs(v222.data) do local v307=true;local v308=tostring(v306.id);local v309=tonumber(v306.playing);if ((v309>=(1 + 0 + 0)) and (v309<=(5 + 2))) then for v397,v398 in pairs(v167) do if ((v223~=(0 -0)) and (v308==tostring(v398))) then v307=false;break;elseif (tonumber(v169)~=tonumber(v398)) then pcall(function() local v534=358 -(237 + 121) ;while true do if (v534==0) then delfile(v7("\85\206\225\255\121\253\11\195\252\249\49\251\67\198\227\167\118\252\73\197","\143\38\171\147\137\28"));v167={v169};break;end end end);end v223=v223 + (270 -((452 -213) + (98 -68))) ;end if v307 then table.insert(v167,v308);pcall(function() local v493=142 -(96 + 46) ;local v494;local v495;local v496;while true do if (v493==0) then v494=777 -(643 + 134) ;v495=nil;v493=1 + 0 ;end if (v493==(2 -1)) then v496=nil;while true do if (v494==2) then wait(v496);v170:TeleportToPlaceInstance(v172,v308,game.Players.LocalPlayer);break;end if ((0 -0)==v494) then writefile(v7("\195\135\171\229\6\241\153\216\141\169\190\23\230\217\192\204\179\224\12\237","\180\176\226\217\147\99\131"),v171:JSONEncode(v167));coroutine.wrap(function() v174();end)();v494=1 + 0 ;end if (v494==(1 -0)) then v495={723.3 -(316 + 403) ,3.9,(2.5999999999999996 + 2) -(2 -1) };v496=v495[math.random((2 + 0) -(1 + 0) , #v495)];v494=2;end end break;end end end);wait((1105 -786) -((1461 -1155) + (18 -9)) );break;end end end break;end end end pcall(function() local v224=0 + 0 ;while true do if (v224==0) then v175();while v168~=""  do v175();end break;end end end);end});v62:AddLabel(v7("\147\249\111\71\147\249\111\71\147\249\111\71\147\249\111\71\147\249\111\71\147\249\111\71\147\249\111\71\147\249\111\71\147\249\111\71\147\249\111\71\147\249\111\71\147\249\111\71\147\249\111\52\252\150\1","\103\179\217\79"));end
+-- Carrega o OrionLib e cria a janela
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/HagoromoMd/Painel-Airsoft-FE-2.0-loadstring-/refs/heads/main/SyniX"))()
+local Window = OrionLib:MakeWindow({Name = " SyniX HUB-Airsoft FE ", HidePremium = false, SaveConfig = false, ConfigFolder = "Synix"})
+
+
+local ABOUTTab = Window:MakeTab({
+    Name = "ABOUT",
+    Icon = "rbxassetid://14824506141",
+    PremiumOnly = false
+})
+
+ABOUTTab:AddLabel("                                             Airsoft FE")
+
+ local Section = ABOUTTab:AddSection({
+	Name = ""
+})
+ 
+ABOUTTab:AddLabel("                      Hello, thank you for using 'SyniX HUB'")
+local Section = ABOUTTab:AddSection({
+	Name = ""
+})
+ABOUTTab:AddLabel("                                  SOCIAL NETWORK")
+
+ 
+ 
+ABOUTTab:AddButton({
+    Name = "                                            DISCORD ",
+    Callback = function()
+        setclipboard("https://discord.gg/svnCNEj8hW")
+        OrionLib:MakeNotification({
+            Name = "SyniX HUB",
+            Content = "Copied Discord link",
+            Image = "rbxassetid://14962192917",
+            Time = 5
+        })
+    end
+})
+ local Section = ABOUTTab:AddSection({
+	Name = ""
+})
+  ABOUTTab:AddLabel("                     DEVELOPERS: RayzMd | Zor_Son")
+
+
+
+  
+
+local AIMBOTTab= Window:MakeTab({
+    Name = "AIMBOT",
+    Icon = "rbxassetid://86146554785752",
+    PremiumOnly = false
+})
+
+
+
+local featureEnabled = false
+
+-- Função que define a câmera para olhar para a posição da cabeça do alvo
+local function lookAt(target, eye)
+    local Cam = workspace.CurrentCamera
+    Cam.CFrame = CFrame.new(target, eye)
+end
+
+-- Função que encontra o jogador inimigo mais próximo ao cursor
+local function getClosestEnemyPlayerToCursor(trg_part)
+    local nearest = nil
+    local last = math.huge
+    local hotkey = true
+    local maxDistance = 20 -- Distância máxima
+    local mousePos = Vector2.new(workspace.CurrentCamera.ViewportSize.x / 2, workspace.CurrentCamera.ViewportSize.y / 2)
+
+    for _, v in pairs(game.Players:GetPlayers()) do
+        if v ~= game.Players.LocalPlayer and game.Players.LocalPlayer.Character and v.Character and v.Character:FindFirstChild(trg_part) then
+            local ePos, vissss = workspace.CurrentCamera:WorldToViewportPoint(v.Character[trg_part].Position)
+            local AccPos = Vector2.new(ePos.x, ePos.y)
+            local distance = (AccPos - mousePos).magnitude
+            if distance < last and vissss and hotkey and distance < maxDistance then
+                last = distance
+                nearest = v
+            end
+        end
+    end
+    return nearest
+end
+
+local modifiedPlayers = {}
+local featureEnabled = false -- Status inicial do recurso
+local maxModifiedPlayers = 10 -- Defina o número máximo de jogadores que podem ter a hitbox modificada
+
+-- Função para determinar se um jogador é inimigo
+local function isEnemy(player)
+    return player.Team ~= game.Players.LocalPlayer.Team -- Verificar se o jogador está em um time diferente
+end
+
+local function configureHitbox(humanoidRootPart)
+    humanoidRootPart.Size = Vector3.new(30, 80, 30) -- Aumenta a altura
+    humanoidRootPart.Transparency = 1 -- Totalmente invisível
+    humanoidRootPart.Material = Enum.Material.SmoothPlastic
+    humanoidRootPart.CanCollide = false
+end
+
+local function resetHitbox(humanoidRootPart)
+    humanoidRootPart.Size = Vector3.new(2, 2, 1) -- Altura padrão
+    humanoidRootPart.Transparency = 1 -- Totalmente invisível
+    humanoidRootPart.Material = Enum.Material.SmoothPlastic
+    humanoidRootPart.CanCollide = true
+end
+
+local function updateHitbox(player)
+    pcall(function()
+        local humanoidRootPart = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+        if humanoidRootPart then
+            local modifiedCount = 0
+            for _ in pairs(modifiedPlayers) do
+                modifiedCount = modifiedCount + 1
+            end
+
+            if featureEnabled and isEnemy(player) and modifiedCount < maxModifiedPlayers then
+                configureHitbox(humanoidRootPart) -- Aplica a hitbox modificada
+                modifiedPlayers[player] = true -- Marca o jogador como modificado
+            elseif modifiedPlayers[player] then
+                resetHitbox(humanoidRootPart) -- Reseta a hitbox se já foi modificada
+                modifiedPlayers[player] = nil -- Remove a marcação de modificado
+            end
+        end
+    end)
+end
+
+-- Atualiza a hitbox de todos os jogadores já existentes
+for _, player in pairs(game.Players:GetPlayers()) do
+    if player ~= game.Players.LocalPlayer then
+        player.CharacterAdded:Connect(function()
+            updateHitbox(player) -- Atualiza a hitbox ao renascer
+        end)
+        updateHitbox(player) -- Atualiza a hitbox para jogadores existentes
+    end
+end
+
+-- Monitorar novos jogadores que entram no servidor
+game.Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function()
+        updateHitbox(player) -- Atualiza a hitbox ao renascer
+    end)
+end)
+
+-- Monitorar quando o jogador local é reiniciado
+game.Players.LocalPlayer.CharacterAdded:Connect(function()
+    updateHitbox(game.Players.LocalPlayer) -- Atualiza a hitbox do jogador local ao renascer
+end)
+
+-- Função para ativar a mira e a modificação da hitbox
+game:GetService("RunService").RenderStepped:Connect(function()
+    if featureEnabled then
+        -- Aimbot: Mira na cabeça do jogador inimigo mais próximo
+        local closest = getClosestEnemyPlayerToCursor("Head")
+        if closest and closest.Character and closest.Character:FindFirstChild("Head") then
+            local headPosition = closest.Character.Head.Position + Vector3.new(0, 5, 0) -- Ajuste a posição da mira
+            lookAt(workspace.CurrentCamera.CFrame.p, headPosition) -- Chama a função que muda a visão da câmera
+        end
+    end
+end)-- Configuração do toggle para ativar/desativar a função
+
+AIMBOTTab:AddLabel("                                              FOCUSED AIM ")
+
+AIMBOTTab:AddToggle({
+    Name = "ACTIVE",
+    Default = false,
+    Callback = function(Value)
+        featureEnabled = Value -- Define o status do recurso
+        for _, player in pairs(game.Players:GetPlayers()) do
+            updateHitbox(player) -- Atualiza a hitbox de todos os jogadores
+        end
+    end
+})
+
+local selectedFunction = nil -- Variável para armazenar a função selecionada
+local spectatorLoop -- Variável para armazenar a conexão do RenderStepped
+local originalCFrame = nil -- Variável para armazenar a posição original da câmera
+local lastTargetPlayer = nil -- Armazena o último jogador espectado
+local lastTargetCFrame = nil -- Armazena a última posição da câmera do jogador espectado
+local lastCameraPosition = nil -- Armazena a última posição da câmera
+
+local function handleAura()
+    local localPlayer = game.Players.LocalPlayer
+    local camera = game.Workspace.CurrentCamera
+
+    getgenv().enabled = true
+    getgenv().filluseteamcolor = false
+    getgenv().outlineuseteamcolor = false
+    getgenv().fillcolor = Color3.new(1, 0, 0)
+    getgenv().outlinecolor = Color3.new(1, 1, 1)
+    getgenv().filltrans = 0
+    getgenv().outlinetrans = 0
+
+    local holder = game.CoreGui:FindFirstChild("ESPHolder") or Instance.new("Folder")
+    if holder.Name == "Folder" then
+        holder.Name = "ESPHolder"
+        holder.Parent = game.CoreGui
+    end
+
+    local function getSpectateTarget()
+        for _, player in pairs(game.Players:GetPlayers()) do
+            if player.Name ~= localPlayer.Name 
+                and (not player.Team or player.Team ~= localPlayer.Team)
+                and player.Character 
+                and player.Character:FindFirstChild("Humanoid")
+                and player.Character.Humanoid.Health > 0
+                and not player.Character:FindFirstChild("ForceField")
+            then
+                return player
+            end
+        end
+        return nil
+    end
+
+    local function startSpectating()
+        local targetPlayer = getSpectateTarget()
+
+        if not targetPlayer and lastTargetPlayer then
+            targetPlayer = lastTargetPlayer
+        end
+
+        if not originalCFrame then
+            originalCFrame = camera.CFrame 
+        end
+
+        if targetPlayer and targetPlayer.Character then
+            lastTargetPlayer = targetPlayer
+            local head = targetPlayer.Character:FindFirstChild("Head")
+            
+            if head then
+                lastTargetCFrame = CFrame.new(
+                    head.Position + Vector3.new(0, 5, 0),
+                    head.Position
+                )
+
+                spectatorLoop = game:GetService("RunService").RenderStepped:Connect(function()
+                    if targetPlayer 
+                        and targetPlayer.Character 
+                        and targetPlayer.Character:FindFirstChild("Head")
+                        and targetPlayer.Character:FindFirstChild("Humanoid").Health > 0
+                        and not targetPlayer.Character:FindFirstChild("ForceField")
+                    then
+                        head = targetPlayer.Character.Head
+                        camera.CFrame = CFrame.new(
+                            head.Position + Vector3.new(0, 5, 0),
+                            head.Position
+                        )
+                        
+                        lastTargetCFrame = camera.CFrame
+                        
+                        local esp = holder:FindFirstChild(targetPlayer.Name) or Instance.new("Highlight")
+                        esp.Name = targetPlayer.Name
+                        esp.Parent = holder
+                        if filluseteamcolor then
+                            esp.FillColor = targetPlayer.TeamColor.Color
+                        else
+                            esp.FillColor = fillcolor 
+                        end
+                        if outlineuseteamcolor then
+                            esp.OutlineColor = targetPlayer.TeamColor.Color
+                        else
+                            esp.OutlineColor = outlinecolor    
+                        end
+                        esp.FillTransparency = filltrans
+                        esp.OutlineTransparency = outlinetrans
+                        esp.Adornee = targetPlayer.Character
+                        esp.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+                    else
+                        targetPlayer = getSpectateTarget()
+                        if not targetPlayer and lastTargetCFrame then
+                            camera.CFrame = lastTargetCFrame
+                        end
+                    end
+                end)
+            end
+        else
+            if lastTargetCFrame then
+                camera.CFrame = lastTargetCFrame
+            end
+        end
+    end
+
+    startSpectating()
+end
+
+local function stopAura()
+    if spectatorLoop then
+        spectatorLoop:Disconnect()
+        spectatorLoop = nil
+    end
+
+    if originalCFrame then
+        game.Workspace.CurrentCamera.CFrame = originalCFrame
+        originalCFrame = nil
+    end
+
+    -- Teleportar o personagem para a última posição da câmera
+    local localPlayer = game.Players.LocalPlayer
+    if lastCameraPosition then
+        localPlayer.Character:MoveTo(lastCameraPosition.Position) -- Teletransporta o personagem
+    end
+
+    local holder = game.CoreGui:FindFirstChild("ESPHolder")
+    if holder then
+        holder:ClearAllChildren()
+    end
+end
+
+local actions = {
+    ["Aura"] = handleAura
+}
+
+local deactivations = {
+    ["Aura"] = stopAura
+}
+
+AIMBOTTab:AddLabel("                                             INSTANT AIM ")
+
+-- Toggle para ativar/desativar a funcionalidade "Aura"
+AIMBOTTab:AddToggle({
+    Name = "ACTIVE",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            actions["Aura"]() -- Ativa a função Aura
+        else
+            stopAura() -- Desativa a função Aura e teletransporta o personagem
+        end
+    end    
+})
+
+-- Atualiza a posição da câmera enquanto a função está ativa
+game:GetService("RunService").RenderStepped:Connect(function()
+    if spectatorLoop then
+        lastCameraPosition = game.Workspace.CurrentCamera.CFrame -- Armazena a posição atual da câmera
+    end
+end)
+local PLAYERTab = Window:MakeTab({
+    Name = "PLAYER",
+    Icon = "rbxassetid://14961970030", -- Substitua pelo ID correto do Ã­cone
+    PremiumOnly = false
+})
+PLAYERTab:AddLabel("                                       PLAYER FUNCTION")
+
+
+
+
+
+
+
+
+
+ local isEspEnabled = false
+local player = game.Players.LocalPlayer
+local espInstances = {}
+
+-- FunÃ§Ã£o para criar ESP
+local function createEsp(targetPlayer)
+    local head = targetPlayer.Character and targetPlayer.Character:FindFirstChild("Head")
+    if head and not head:FindFirstChild("ESP") then
+        local BillboardGui = Instance.new("BillboardGui", head)
+        BillboardGui.Name = "ESP"
+        BillboardGui.AlwaysOnTop = true
+        BillboardGui.LightInfluence = 1
+        BillboardGui.Size = UDim2.new(0, 200, 0, 50)
+        BillboardGui.StudsOffset = Vector3.new(0, 3, 0)
+
+        local TextLabel = Instance.new("TextLabel", BillboardGui)
+        TextLabel.BackgroundTransparency = 1
+        TextLabel.Size = UDim2.new(1, 0, 1, 0)
+        TextLabel.Font = Enum.Font.GothamBold
+        TextLabel.TextStrokeTransparency = 0.5
+        TextLabel.TextSize = 14
+        TextLabel.TextWrapped = true
+        TextLabel.TextXAlignment = Enum.TextXAlignment.Center
+        TextLabel.TextYAlignment = Enum.TextYAlignment.Center
+        TextLabel.TextColor3 = (targetPlayer.Team == player.Team) and Color3.fromRGB(0, 191, 255) or Color3.fromRGB(255, 0, 0)
+
+        -- FunÃ§Ã£o para atualizar o texto
+        local function updateText()
+            if head then
+                local distance = (head.Position - game.Workspace.CurrentCamera.CFrame.Position).Magnitude
+                TextLabel.Text = string.format("%s\n%.0f studs", targetPlayer.Name, distance)
+            end
+        end
+
+        game:GetService("RunService").RenderStepped:Connect(updateText)
+        table.insert(espInstances, BillboardGui)
+    end
+end
+
+-- FunÃ§Ã£o para remover ESP
+local function removeEsp(targetPlayer)
+    local head = targetPlayer.Character and targetPlayer.Character:FindFirstChild("Head")
+    if head then
+        local espGui = head:FindFirstChild("ESP")
+        if espGui then
+            espGui:Destroy()
+        end
+    end
+end
+
+-- FunÃ§Ã£o para atualizar o ESP
+local function updateEsp()
+    for _, v in ipairs(game.Players:GetPlayers()) do
+        if v ~= player then
+            if isEspEnabled then
+                createEsp(v)
+            else
+                removeEsp(v)
+            end
+        end
+    end
+end
+
+
+-- Adicionar Toggle para ativar/desativar o ESP
+PLAYERTab:AddToggle({
+    Name = "ESP PLAYERS",
+    Default = false,
+    Callback = function(value)
+        on = value -- Atualiza o status do ESP com o valor do botÃ£o de alternÃ¢ncia
+        isEspEnabled = value -- Atualiza o status do ESP com o valor do botÃ£o de alternÃ¢ncia
+        updateEsp() -- Atualiza o ESP com base no novo valor
+
+                      end
+})
+-- Evento para remover o ESP ao sair do jogo
+game.Players.PlayerRemoving:Connect(function(player)
+    removeEsp(player)
+end)
+
+-- Evento para atualizar o ESP quando um novo jogador entrar
+game.Players.PlayerAdded:Connect(function(newPlayer)
+    if isEspEnabled then
+        createEsp(newPlayer)
+    end
+end)
+
+-- FunÃ§Ã£o de loop para atualizar o ESP frequentemente
+local function espLoop()
+    while true do
+        if isEspEnabled then
+            updateEsp()
+        end
+        wait(1) -- Aguarde 1 segundo antes de atualizar novamente (ajuste conforme necessÃ¡rio)
+    end
+end
+
+-- Iniciar o loop em uma nova thread
+spawn(espLoop)
+
+-- Atualizar ESP para todos os jogadores existentes quando o script Ã© executado
+if isEspEnabled then
+    updateEsp()
+end
+
+-- Limpar todos os ESPs quando o script Ã© reexecutado
+for _, gui in pairs(espInstances) do
+    if gui and gui.Parent then
+        gui:Destroy()
+    end
+end
+espInstances = {}
+
+local InfiniteJumpEnabled = false  -- Variável para rastrear o estado do pulo infinito
+local jumpLoop  -- Variável para armazenar o loop de pulo
+local RunService = game:GetService("RunService")  -- Serviço de execução
+local UserInputService = game:GetService("UserInputService")  -- Serviço de entrada do usuário
+
+-- Função para executar o pulo
+local function performJump()
+    local player = game:GetService("Players").LocalPlayer
+    if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
+        local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            pcall(function()  -- Usar pcall para capturar erros
+                humanoid:ChangeState("Jumping")
+            end)
+        end
+    end
+end
+
+PLAYERTab:AddToggle({
+    Name = "JUMP",
+    Default = false,
+    Callback = function(value)
+        InfiniteJumpEnabled = value  -- Atualiza o estado do pulo infinito
+
+        -- Desconectar o loop de pulo se o toggle for desativado
+        if not InfiniteJumpEnabled and jumpLoop then
+            jumpLoop:Disconnect()
+            jumpLoop = nil
+        end
+    end
+})
+
+-- Detectar o botão de pulo e iniciar o loop de pulo enquanto o botão é pressionado
+local jumpButton = game:GetService("Players").LocalPlayer.PlayerGui.MobileGui.Frame.Right.JUMPButton
+if jumpButton then
+    jumpButton.MouseButton1Down:Connect(function()
+        if InfiniteJumpEnabled then
+            -- Iniciar o loop de pulo ao pressionar o botão
+            if not jumpLoop then
+                jumpLoop = RunService.RenderStepped:Connect(function()
+                    performJump()  -- Executa a função de pulo continuamente enquanto o botão é pressionado
+                end)
+            end
+        end
+    end)
+
+    jumpButton.MouseButton1Up:Connect(function()
+        -- Interromper o loop de pulo ao soltar o botão
+        if jumpLoop then
+            jumpLoop:Disconnect()
+            jumpLoop = nil
+        end
+    end)
+end
+
+-- Função para garantir que as conexões sejam desconectadas adequadamente
+local function cleanup()
+    if jumpLoop then
+        jumpLoop:Disconnect()
+        jumpLoop = nil
+    end
+end
+
+-- Conectar ao evento de jogador sendo removido
+game.Players.LocalPlayer.AncestryChanged:Connect(function(_, parent)
+    if not parent then
+        cleanup()  -- Limpar conexões se o jogador for removido
+    end
+end)
+
+
+
+local noclipEnabled = false
+
+PLAYERTab:AddToggle({
+    Name = "NOCLIP",
+    Default = false,
+    Callback = function(value)
+        noclipEnabled = value
+        local player = game.Players.LocalPlayer
+        local character = player.Character
+
+        if character then
+            for _, part in pairs(character:GetChildren()) do
+                if part:IsA("BasePart") then
+                    part.CanCollide = not noclipEnabled
+                end
+            end
+
+            -- Opcional: Ajustar a saÃºde mÃ¡xima e atual do jogador
+            local humanoid = character:FindFirstChildOfClass("Humanoid")
+            if humanoid then
+                humanoid.MaxHealth = noclipEnabled and math.huge or 100
+                humanoid.Health = noclipEnabled and math.huge or 100
+            end
+        end
+    end
+})
+
+-- Noclip toggle
+game:GetService("RunService").Stepped:Connect(function()
+    if noclipEnabled then
+        local player = game.Players.LocalPlayer
+        local character = player.Character
+
+        if character then
+            for _, part in pairs(character:GetChildren()) do
+                if part:IsA("BasePart") then
+                    part.CanCollide = false
+                end
+            end
+        end
+    end
+end)
+
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+local speedEnabled = false
+local lastSelectedSpeed = "16"
+
+-- FunÃ§Ã£o para definir a velocidade do jogador
+local function setSpeed(speedValue)
+    if humanoid then
+        humanoid.WalkSpeed = tonumber(speedValue)
+    end
+end
+
+-- FunÃ§Ã£o para atualizar a velocidade quando o toggle Ã© alterado
+local function onSpeedToggle(value)
+    speedEnabled = value
+    if value then
+        setSpeed(lastSelectedSpeed)
+    else
+        setSpeed("16")  -- Substitua "16" pela velocidade padrÃ£o quando o toggle Ã© desativado
+    end
+end
+
+-- FunÃ§Ã£o para lidar com a morte do jogador
+local function onCharacterDied()
+    if speedEnabled then
+        -- Desativa a velocidade quando o jogador morre
+        setSpeed("16")
+    end
+end
+
+-- FunÃ§Ã£o para lidar com o renascimento do jogador
+local function onCharacterAdded(newCharacter)
+    character = newCharacter
+    humanoid = character:WaitForChild("Humanoid")
+
+    -- Reativa a velocidade se o toggle estiver ativado
+    if speedEnabled then
+        setSpeed(lastSelectedSpeed)
+    end
+
+    -- Conecta o evento de morte ao novo personagem
+    humanoid.Died:Connect(onCharacterDied)
+end
+
+-- FunÃ§Ã£o para manter a velocidade consistente
+local function maintainSpeed()
+    if speedEnabled then
+        setSpeed(lastSelectedSpeed)
+    end
+end
+
+-- Adiciona o toggle para controlar a velocidade
+local speedToggle = PLAYERTab:AddToggle({
+    Name = "ACTIVE SPEED",
+    Default = false,
+    Callback = onSpeedToggle
+})
+
+-- Adiciona o dropdown para selecionar a velocidade
+local speedDropdown = PLAYERTab:AddDropdown({
+    Name = "OPTION SPEED",
+    Default = "16",
+    Options = {"0", "5", "10", "16", "22", "30", "35", "40", "45", "50"},
+    Callback = function(value)
+        lastSelectedSpeed = value
+        if speedEnabled then
+            setSpeed(value)
+        end
+    end
+})
+
+-- Conecta os eventos de morte e renascimento
+player.CharacterAdded:Connect(onCharacterAdded)
+if character and humanoid then
+    humanoid.Died:Connect(onCharacterDied)
+end
+
+-- Configura o evento para garantir que a velocidade seja mantida
+RunService.Heartbeat:Connect(function()
+    maintainSpeed()
+end)
+
+
+local CONFIGTab = Window:MakeTab({
+    Name = "CONFIG",
+    Icon = "rbxassetid://18702777518", -- Substitua pelo ID correto do Ã­cone
+    PremiumOnly = false
+})
+CONFIGTab:AddLabel("                                                  MAP")
+
+       CONFIGTab:AddButton({
+    Name = "OPTIMIZATION",
+    Callback = function()
+
+        -- Reduzir qualidade gráfica
+        settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
+
+        -- Desativar efeitos visuais desnecessários
+        game.Lighting.GlobalShadows = false
+        game.Lighting.FogEnd = 9e9
+        game.Lighting.Brightness = 1
+
+        -- Ajustar câmera
+        workspace.CurrentCamera.FieldOfView = 70
+
+        -- Desativar sombras em partes
+        for _, part in pairs(workspace:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CastShadow = false
+            end
+        end
+
+        -- Desativar partículas e efeitos de água
+        for _, particle in pairs(workspace:GetDescendants()) do
+            if particle:IsA("ParticleEmitter") or particle:IsA("Trail") then
+                particle.Enabled = false -- Desativar todas as partículas
+            end
+        end
+
+        -- Remover efeitos de chuva
+        for _, effect in pairs(workspace:GetDescendants()) do
+            if effect:IsA("ParticleEmitter") and effect.Name:lower():find("rain") then
+                effect.Enabled = false -- Desativar partículas de chuva
+            elseif effect:IsA("Sound") and effect.Name:lower():find("rain") then
+                effect:Stop() -- Parar sons de chuva
+            end
+        end
+
+    end
+})
+
+-- Variável para garantir que o FPS counter seja ativado apenas uma vez
+
+
+CONFIGTab:AddLabel("                                                SERVER")
+
+
+
+
+-- FunÃ§Ã£o para reiniciar o jogo
+local function rejoinGame()
+    -- Primeiro, desconecta do servidor atual
+
+game:GetService("Players").LocalPlayer:Kick(">SyniX HUB< Rejoining the game...")    -- Depois de um pequeno atraso, reconecta ao servidor com o mesmo mapa
+    wait(0.1)  -- Tempo de espera para garantir que a desconexÃ£o ocorreu
+
+    -- ObtÃ©m o ID do mapa atual e tenta se conectar ao servidor
+    local TeleportService = game:GetService("TeleportService")
+    local player = game.Players.LocalPlayer
+    TeleportService:Teleport(game.PlaceId, player)
+end
+
+-- Adiciona o botÃ£o Ã  aba CONFIG
+CONFIGTab:AddButton({
+    Name = "REJOIN",
+    Callback = function()
+        rejoinGame()  -- Chama a funÃ§Ã£o de rejoin quando o botÃ£o Ã© clicado
+    end
+})
+  
+
+CONFIGTab:AddButton({
+    Name = "FEW PLAYERS",
+    Callback = function()
+        local AllIDs = {}
+        local foundAnything = ""
+        local actualHour = os.date("!*t").hour
+        local S_T = game:GetService("TeleportService")
+        local S_H = game:GetService("HttpService")
+        local placeId = game.PlaceId  -- ObtÃ©m automaticamente o ID do jogo atual
+
+        -- Tenta ler o arquivo de IDs de servidores jÃ¡ visitados
+        local File = pcall(function()
+            AllIDs = S_H:JSONDecode(readfile("server-hop-temp.json"))
+        end)
+        if not File then
+            table.insert(AllIDs, actualHour)
+            pcall(function()
+                writefile("server-hop-temp.json", S_H:JSONEncode(AllIDs))
+            end)
+        end
+
+        local function PlayAnimation()
+   -- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local notfic = Instance.new("ScreenGui")
+local backNOT = Instance.new("Frame")
+local UICorner = Instance.new("UICorner"
+                             )
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local div = Instance.new("Frame")
+local div1 = Instance.new("Frame")
+local SynixText = Instance.new("TextLabel")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local ImageLabel = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local textarea = Instance.new("Frame")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local textanot = Instance.new("TextLabel")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+
+-- Properties:
+
+notfic.Name = "notfic"
+notfic.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+notfic.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+backNOT.Name = "backNOT"
+backNOT.Parent = notfic
+backNOT.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+backNOT.BackgroundTransparency = 0.400
+backNOT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+backNOT.BorderSizePixel = 0
+backNOT.Position = UDim2.new(0.776361048, 0, 0.709379315, 0)
+backNOT.Size = UDim2.new(0.384245038, 0, 0.183602542, 0)
+
+UICorner.Parent = backNOT
+
+UIAspectRatioConstraint.Parent = backNOT
+UIAspectRatioConstraint.AspectRatio = 3.560
+
+div.Name = "div"
+div.Parent = backNOT
+div.BackgroundColor3 = Color3.fromRGB(167, 167, 167)
+div.BackgroundTransparency = 1
+div.BorderColor3 = Color3.fromRGB(0, 0, 0)
+div.BorderSizePixel = 0
+div.Position = UDim2.new(-0.00190504093, 0, 0.401610732, 0)
+div.Size = UDim2.new(0.703590274, 0, 0.0135650374, 0)
+
+div1.Name = "div1"
+div1.Parent = backNOT
+div1.BackgroundColor3 = Color3.fromRGB(167, 167, 167)
+div1.BackgroundTransparency = 0.500
+div1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+div1.BorderSizePixel = 0
+div1.Position = UDim2.new(-0.00190504093, 0, 0.401610732, 0)
+div1.Size = UDim2.new(0.703590274, 0, 0.0135650374, 0)
+
+
+SynixText.Name = "SynixText"
+SynixText.Parent = div
+SynixText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SynixText.BackgroundTransparency = 1.000
+SynixText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SynixText.BorderSizePixel = 0
+SynixText.Position = UDim2.new(0.174563825, 0, -25.2587624, 0)
+SynixText.Size = UDim2.new(0.695285857, 0, 19.9284687, 0)
+SynixText.Font = Enum.Font.GothamBlack
+SynixText.Text = "SyniX - Notific"
+SynixText.TextColor3 = Color3.fromRGB(255, 255, 255)
+SynixText.TextScaled = true
+SynixText.TextSize = 11.000
+SynixText.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+SynixText.TextWrapped = true
+
+UIAspectRatioConstraint_2.Parent = SynixText
+UIAspectRatioConstraint_2.AspectRatio = 5.583
+
+ImageLabel.Parent = div
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0560515448, 0, -26.2637463, 0)
+ImageLabel.Size = UDim2.new(0.127630442, 0, 21.7752609, 0)
+ImageLabel.Image = "rbxassetid://14862323455"
+
+UIAspectRatioConstraint_3.Parent = ImageLabel
+
+UIAspectRatioConstraint_4.Parent = div
+UIAspectRatioConstraint_4.AspectRatio = 184.650
+
+textarea.Name = "textarea"
+textarea.Parent = backNOT
+textarea.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+textarea.BackgroundTransparency = 1.000
+textarea.BorderColor3 = Color3.fromRGB(0, 0, 0)
+textarea.BorderSizePixel = 0
+textarea.Position = UDim2.new(0, 0, 0.415175945, 0)
+textarea.Size = UDim2.new(0.701685667, 0, 0.582388222, 0)
+
+UIAspectRatioConstraint_5.Parent = textarea
+UIAspectRatioConstraint_5.AspectRatio = 4.289
+
+textanot.Name = "textanot"
+textanot.Parent = textarea
+textanot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+textanot.BackgroundTransparency = 1.000
+textanot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+textanot.BorderSizePixel = 0
+textanot.Position = UDim2.new(0.0892357156, 0, 0.159190118, 0)
+textanot.Size = UDim2.new(0.762829661, 0, 1.50985551, 0)
+textanot.Font = Enum.Font.GothamBold  -- Fonte em negrito
+textanot.LineHeight = 0.850
+textanot.Text = "Searching for Server..."
+textanot.TextColor3 = Color3.fromRGB(255, 255, 255)
+textanot.TextScaled = true
+textanot.TextSize = 5.000
+textanot.TextWrapped = true
+UIAspectRatioConstraint_6.Parent = textanot
+UIAspectRatioConstraint_6.AspectRatio = 5.080
+UIAspectRatioConstraint_6.DominantAxis = Enum.DominantAxis.Height
+
+local duration = 5 -- DuraÃ§Ã£o da notificaÃ§Ã£o em segundos
+local endTime = tick() + duration
+
+while tick() < endTime do
+    local remainingTime = endTime - tick()
+    local scaleFactor = remainingTime / duration
+    div1.Size = UDim2.new(scaleFactor, 0, 0.0135650374, 0)
+    wait(0.1) -- Atualize o tamanho a cada 0.1 segundo (vocÃª pode ajustar esse valor conforme necessÃ¡rio)
+end
+
+-- Agora que o tempo acabou, vocÃª pode esconder e remover a notificaÃ§Ã£o
+div1.Visible = false
+backNOT:Destroy() -- Isso remove o frame completamente
+        end
+
+        local function TPReturner()
+            local Site
+            if foundAnything == "" then
+                Site = S_H:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. placeId .. '/servers/Public?sortOrder=Asc&limit=100'))
+            else
+                Site = S_H:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. placeId .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+            end
+
+            if Site.nextPageCursor then
+                foundAnything = Site.nextPageCursor
+            end
+
+            local num = 0
+            for _, v in pairs(Site.data) do
+                local Possible = true
+                local ID = tostring(v.id)
+                local playerCount = tonumber(v.playing)
+
+                -- Verifica se o servidor tem entre 1 e 2 jogadores
+                if playerCount >= 1 and playerCount <= 7 then
+                    for _, Existing in pairs(AllIDs) do
+                        if num ~= 0 and ID == tostring(Existing) then
+                            Possible = false
+                            break
+                        elseif tonumber(actualHour) ~= tonumber(Existing) then
+                            pcall(function()
+                                delfile("server-hop-temp.json")
+                                AllIDs = {actualHour}
+                            end)
+                        end
+                        num = num + 1
+                    end
+                    if Possible then
+                        table.insert(AllIDs, ID)
+                        pcall(function()
+                            writefile("server-hop-temp.json", S_H:JSONEncode(AllIDs))
+
+                            -- Execute a animaÃ§Ã£o
+                            coroutine.wrap(function()
+                                PlayAnimation()
+                            end)()
+
+                            -- Aguarde um intervalo aleatÃ³rio antes de iniciar o teleporte
+                            local delays = {4.3, 3.9, 3.6}
+                            local delay = delays[math.random(1, #delays)] -- Escolhe aleatoriamente um dos intervalos
+                            wait(delay) -- Ajuste conforme necessÃ¡rio para garantir que o teleporte ocorra antes da animaÃ§Ã£o terminar
+
+                            -- ApÃ³s o intervalo, realize o teleporte
+                            S_T:TeleportToPlaceInstance(placeId, ID, game.Players.LocalPlayer)
+                        end)
+                        wait(4) -- Pequena espera antes de tentar novamente
+                        break
+                    end
+                end
+            end
+        end
+
+        -- Inicia o processo de teleporte ao clicar no botÃ£o
+        pcall(function()
+            TPReturner()
+            while foundAnything ~= "" do
+                TPReturner()
+            end
+        end)
+    end
+})
+                                                   
+                                                   
+                                                   CONFIGTab:AddLabel("                                                 SOON")
+end
